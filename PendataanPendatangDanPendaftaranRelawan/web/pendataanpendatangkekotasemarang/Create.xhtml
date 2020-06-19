@@ -9,9 +9,6 @@
     <ui:composition template="/template.xhtml">
         <ui:define name="title">Pendataan Pendatang Kota Semarang</ui:define>
         <ui:define name="body" class=" pace-done">
-            <!--<h:panelGroup id="messagePanel" layout="block">
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
-            </h:panelGroup>-->
             <div class="pace  pace-inactive">
                 <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
                     <div class="pace-progress-inner"></div>
@@ -33,11 +30,16 @@
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-3">Informasi Biodata Anda</a>
+                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-3">Silahkan Isi Formulir Berikut</a>
                                         </h4>
                                     </div>
                                     <div id="demo-acc-panel-3" class="panel-collapse collapse in">
                                         <div class="panel-body">
+                                            <div class="form-group feedback">
+                                                <h:panelGroup id="messagePanel" layout="block">
+                                                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                                                </h:panelGroup>
+                                            </div>
                                             <div class="form-group has-feedback">
                                                 <h:outputLabel class="col-lg-3 control-label text-bold" value="NIK" for="nik" />
                                                 <div class="col-lg-7">                    
@@ -75,7 +77,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group has-feedback">
-                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Asal Keberangkatan (Nama Kota)" for="asalKeberangkatan" />
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Asal Keberangkatan" for="asalKeberangkatan" />
                                                 <div class="col-lg-7">
                                                     <h:inputText styleClass="form-control" id="asalKeberangkatan" value="#{pendataanpendatangkekotasemarangController.selected.asalKeberangkatan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_asalKeberangkatan}" pt:placeholder="Isikan nama kota asal keberangkatan. Contoh: Kabupaten Semarang"/>
                                                 </div>
@@ -87,7 +89,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group has-feedback">
-                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Tanggal dan Waktu Kedatangan" for="tanggalWaktuKedatangan" />
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Waktu Kedatangan" for="tanggalWaktuKedatangan" />
                                                 <div class="col-lg-7">
                                                     <h:inputText styleClass="form-control" id="tanggalWaktuKedatangan" value="#{pendataanpendatangkekotasemarangController.selected.tanggalWaktuKedatangan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_tanggalWaktuKedatangan}" pt:placeholder="Contoh : 19/06/2020 19:30 WIB"/>
                                                 </div>
@@ -111,13 +113,13 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.create}" value="#{bundle.CreatePendataanpendatangkekotasemarangSaveLink}" />
+                                                <h:commandLink style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.create}" value="#{bundle.CreatePendataanpendatangkekotasemarangSaveLink}" />
                                             </div>
                                             <div class="form-group">
-                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareList}" value="#{bundle.CreatePendataanpendatangkekotasemarangShowAllLink}" immediate="true" />
+                                                <h:commandLink style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareList}" value="#{bundle.CreatePendataanpendatangkekotasemarangShowAllLink}" immediate="true" />
                                             </div>
                                             <div class="form-group">
-                                                <h:link styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.CreatePendataanpendatangkekotasemarangIndexLink}"/>
+                                                <h:link style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.CreatePendataanpendatangkekotasemarangIndexLink}"/>
                                             </div>
                                         </div>
                                     </div>

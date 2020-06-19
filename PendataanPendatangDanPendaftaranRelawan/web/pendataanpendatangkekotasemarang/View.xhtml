@@ -8,9 +8,6 @@
     <ui:composition template="/template.xhtml">
         <ui:define name="title">Pendataan Pendatang Kota Semarang</ui:define>
         <ui:define name="body" class=" pace-done">
-            <!--<h:panelGroup id="messagePanel" layout="block">
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
-            </h:panelGroup>-->
             <div class="pace  pace-inactive">
                 <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
                     <div class="pace-progress-inner"></div>
@@ -37,6 +34,11 @@
                                     </div>
                                     <div id="demo-acc-panel-3" class="panel-collapse collapse in">
                                         <div class="panel-body">
+                                            <div class="form-group has-feedback">
+                                                <h:panelGroup id="messagePanel" layout="block">
+                                                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                                                </h:panelGroup>
+                                            </div>
                                             <div class="form-group has-feedback">
                                                 <h:outputLabel class="col-lg-3 control-label text-bold" value="NIK" for="nik" />
                                                 <div class="col-lg-7">                    
@@ -110,19 +112,19 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.destroyAndView}" value="#{bundle.ViewPendataanpendatangkekotasemarangDestroyLink}"/>
+                                                <h:commandLink style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.destroyAndView}" value="#{bundle.ViewPendataanpendatangkekotasemarangDestroyLink}"/>
                                             </div>
                                             <div class="form-group">
-                                                <h:link styleClass="btn btn-block btn-success" outcome="Edit" value="#{bundle.ViewPendataanpendatangkekotasemarangEditLink}"/>
+                                                <h:link style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" outcome="Edit" value="#{bundle.ViewPendataanpendatangkekotasemarangEditLink}"/>
                                             </div>
                                             <div class="form-group">
-                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareCreate}" value="#{bundle.ViewPendataanpendatangkekotasemarangCreateLink}" />
+                                                <h:commandLink style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareCreate}" value="#{bundle.ViewPendataanpendatangkekotasemarangCreateLink}" />
                                             </div>
                                             <div class="form-group">
-                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareList}" value="#{bundle.ViewPendataanpendatangkekotasemarangShowAllLink}"/>
+                                                <h:commandLink style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareList}" value="#{bundle.ViewPendataanpendatangkekotasemarangShowAllLink}"/>
                                             </div>
                                             <div class="form-group">
-                                                <h:link styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.ViewPendataanpendatangkekotasemarangIndexLink}"/>
+                                                <h:link style="width: 30%; margin: auto;" styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.ViewPendataanpendatangkekotasemarangIndexLink}"/>
                                             </div>
                                         </div>
                                     </div>

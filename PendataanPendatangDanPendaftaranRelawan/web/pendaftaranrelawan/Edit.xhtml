@@ -8,9 +8,6 @@
     <ui:composition template="/template.xhtml">
         <ui:define name="title">Formulir Pendaftaran Relawan</ui:define>
         <ui:define name="body" class=" pace-done">
-            <!--<h:panelGroup id="messagePanel" layout="block">
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
-            </h:panelGroup>-->
             <div class="pace  pace-inactive">
                 <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
                     <div class="pace-progress-inner"></div>
@@ -37,6 +34,11 @@
                                     </div>
                                     <div id="demo-acc-panel-3" class="panel-collapse collapse in">
                                         <div class="panel-body">
+                                            <div class="form-group has-feedback">
+                                                <h:panelGroup id="messagePanel" layout="block">
+                                                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                                                </h:panelGroup>
+                                            </div>
                                             <div class="form-group has-feedback">
                                                 <h:outputLabel class="col-lg-3 control-label text-bold" value="Nama Lengkap" for="nama" />
                                                 <div class="col-lg-7">                    
@@ -122,16 +124,16 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendaftaranrelawanController.update}" value="#{bundle.EditPendaftaranrelawanSaveLink}"/>
+                                                <h:commandLink style="width: 30%; margin:auto;" styleClass="btn btn-block btn-success" action="#{pendaftaranrelawanController.update}" value="#{bundle.EditPendaftaranrelawanSaveLink}"/>
                                             </div>
                                             <div class="form-group">
-                                                <h:link styleClass="btn btn-block btn-success" outcome="View" value="#{bundle.EditPendaftaranrelawanViewLink}"/>
+                                                <h:link style="width: 30%; margin:auto;" styleClass="btn btn-block btn-success" outcome="View" value="#{bundle.EditPendaftaranrelawanViewLink}"/>
                                             </div>
                                             <div class="form-group">
-                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendaftaranrelawanController.prepareList}" value="#{bundle.EditPendaftaranrelawanShowAllLink}" immediate="true"/>
+                                                <h:commandLink style="width: 30%; margin:auto;" styleClass="btn btn-block btn-success" action="#{pendaftaranrelawanController.prepareList}" value="#{bundle.EditPendaftaranrelawanShowAllLink}" immediate="true"/>
                                             </div>
                                             <div class="form-group">
-                                                <h:link styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.EditPendaftaranrelawanIndexLink}" />
+                                                <h:link style="width: 30%; margin:auto;" styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.EditPendaftaranrelawanIndexLink}" />
                                             </div>
                                         </div>
                                     </div>
