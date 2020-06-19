@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">Pratinjau Data Pendatang Kota Semarang</ui:define>
+        <ui:define name="body" class=" pace-done">
+            <div class="pace  pace-inactive">
+                <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+                    <div class="pace-progress-inner"></div>
+                </div>
+                <div class="pace-activity"></div>
+            </div>
+            <div id="container" class="cls-container effect">
+                <div id="bg-overlay"></div>
+                <div id="page-content" class="col-sm-1"></div>
+                <div id="page-content" class="col-sm-10">
+                    <div class="panel-body">
+                        <div class="mar-ver pad-btm">
+                            <h1 class="h3">Pratinjau Data Pendatang ke kota Semarang</h1>
+                            <p>Berikut Data yang Telah Disimpan.</p>
+                        </div>
+                        <h:form id="demo-bv-accordion" styleClass="form-horizontal bv-form jsfcrud_list_form">
+                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                            <div id="demo-accordion" class="panel-group accordion">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-3">Informasi Data</a>
+                                        </h4>
+                                    </div>
+                                    <div id="demo-acc-panel-3" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="form-group has-feedback">
+                                                <h:panelGroup id="messagePanel" layout="block">
+                                                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                                                </h:panelGroup>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputText escape="false" value="#{bundle.ListPendataanpendatangkekotasemarangEmpty}" rendered="#{pendataanpendatangkekotasemarangController.items.rowCount == 0}"/>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:panelGroup rendered="#{pendataanpendatangkekotasemarangController.items.rowCount > 0}">
+                                                    <div style="overflow-x:auto;">
+                                                        <h:dataTable styleClass="table table-sm table-bordered" value="#{pendataanpendatangkekotasemarangController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px; text-align: center">
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="Aksi"/>
+                                                                </f:facet>
+                                                                <h:commandLink action="#{pendataanpendatangkekotasemarangController.prepareView}" value="#{bundle.ListPendataanpendatangkekotasemarangViewLink}"/>
+                                                                <h:outputText value=" "/>
+                                                                <h:commandLink action="#{pendataanpendatangkekotasemarangController.prepareEdit}" value="#{bundle.ListPendataanpendatangkekotasemarangEditLink}"/>
+                                                                <h:outputText value=" "/>
+                                                                <h:commandLink action="#{pendataanpendatangkekotasemarangController.destroy}" value="#{bundle.ListPendataanpendatangkekotasemarangDestroyLink}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_nik}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.nik}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_nama}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.nama}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_umur}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.umur}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_noHP}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.noHP}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_jenisKelamin}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.jenisKelamin}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_alamat}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.alamat}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_asalKeberangkatan}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.asalKeberangkatan}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_lokasiKedatangan}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.lokasiKedatangan}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_tanggalWaktuKedatangan}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.tanggalWaktuKedatangan}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_KKKRTRWTujuan}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.KKKRTRWTujuan}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_lamaBerkunjung}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.lamaBerkunjung}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="#{bundle.ListPendataanpendatangkekotasemarangTitle_kondisiKesehatan}"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.kondisiKesehatan}"/>
+                                                            </h:column>
+                                                        </h:dataTable>
+                                                    </div>
+                                                    <br></br>
+                                                    <h:outputText value="#{pendataanpendatangkekotasemarangController.pagination.pageFirstItem + 1}..#{pendataanpendatangkekotasemarangController.pagination.pageLastItem + 1}/#{pendataanpendatangkekotasemarangController.pagination.itemsCount}"/>&nbsp;
+                                                    <h:commandLink action="#{pendataanpendatangkekotasemarangController.previous}" value="#{bundle.Previous} #{pendataanpendatangkekotasemarangController.pagination.pageSize}" rendered="#{pendataanpendatangkekotasemarangController.pagination.hasPreviousPage}"/>&nbsp;
+                                                    <h:commandLink action="#{pendataanpendatangkekotasemarangController.next}" value="#{bundle.Next} #{pendataanpendatangkekotasemarangController.pagination.pageSize}" rendered="#{pendataanpendatangkekotasemarangController.pagination.hasNextPage}"/>&nbsp;
+                                                    <br></br>
+                                                </h:panelGroup>
+                                                <br></br>
+                                                <div class="form-group">
+                                                    <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareCreate}" value="#{bundle.ListPendataanpendatangkekotasemarangCreateLink}"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h:link styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.ListPendataanpendatangkekotasemarangIndexLink}"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+                <div id="page-content" class="col-sm-1"></div>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</html>

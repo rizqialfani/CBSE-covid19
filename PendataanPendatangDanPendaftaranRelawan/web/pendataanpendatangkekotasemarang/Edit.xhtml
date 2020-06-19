@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">Sunting Data Pendatang</ui:define>
+        <ui:define name="body" class=" pace-done">
+            <!--<h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>-->
+            <div class="pace  pace-inactive">
+                <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+                    <div class="pace-progress-inner"></div>
+                </div>
+                <div class="pace-activity"></div>
+            </div>
+            <div id="container" class="cls-container effect">
+                <div id="bg-overlay"></div>
+                <div id="page-content" class="col-sm-1"></div>
+                <div id="page-content" class="col-sm-10">
+                    <div class="panel-body">
+                        <div class="mar-ver pad-btm">
+                            <h1 class="h3">Sunting Pendataan Pendatang ke Kota Semarang</h1>
+                            <p>Silahkan perbarui data.</p>
+                        </div>
+                        <h:form id="demo-bv-accordion" class="form-horizontal bv-form">
+                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                            <div id="demo-accordion" class="panel-group accordion">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-3">Informasi Biodata Anda</a>
+                                        </h4>
+                                    </div>
+                                    <div id="demo-acc-panel-3" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="NIK" for="nik" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="nik" value="#{pendataanpendatangkekotasemarangController.selected.nik}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_nik}" required="true" requiredMessage="#{bundle.CreatePendataanpendatangkekotasemarangRequiredMessage_nik}"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nama Lengkap" for="nama" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="nama" value="#{pendataanpendatangkekotasemarangController.selected.nama}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_nama}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Umur" for="umur" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="umur" value="#{pendataanpendatangkekotasemarangController.selected.umur}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_umur}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nomor Telepon" for="noHP" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="noHP" value="#{pendataanpendatangkekotasemarangController.selected.noHP}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_noHP}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Jenis Kelamin" for="jenisKelamin" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="jenisKelamin" value="#{pendataanpendatangkekotasemarangController.selected.jenisKelamin}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_jenisKelamin}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Alamat Rumah / Domisili" for="alamat" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="alamat" value="#{pendataanpendatangkekotasemarangController.selected.alamat}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_alamat}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Asal Keberangkatan (Nama Kota)" for="asalKeberangkatan" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="asalKeberangkatan" value="#{pendataanpendatangkekotasemarangController.selected.asalKeberangkatan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_asalKeberangkatan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nama Lokasi Kedatangan" for="lokasiKedatangan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="lokasiKedatangan" value="#{pendataanpendatangkekotasemarangController.selected.lokasiKedatangan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_lokasiKedatangan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Tanggal dan Waktu Kedatangan" for="tanggalWaktuKedatangan" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="tanggalWaktuKedatangan" value="#{pendataanpendatangkekotasemarangController.selected.tanggalWaktuKedatangan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_tanggalWaktuKedatangan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Alamat Tujuan" for="KKKRTRWTujuan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="KKKRTRWTujuan" value="#{pendataanpendatangkekotasemarangController.selected.KKKRTRWTujuan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_KKKRTRWTujuan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Lama Berkunjung" for="lamaBerkunjung" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="lamaBerkunjung" value="#{pendataanpendatangkekotasemarangController.selected.lamaBerkunjung}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_lamaBerkunjung}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Kondisi Saat Ini" for="kondisiKesehatan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="kondisiKesehatan" value="#{pendataanpendatangkekotasemarangController.selected.kondisiKesehatan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_kondisiKesehatan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.update}" value="#{bundle.EditPendataanpendatangkekotasemarangSaveLink}"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:link outcome="View" styleClass="btn btn-block btn-success" value="#{bundle.EditPendataanpendatangkekotasemarangViewLink}"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareList}" value="#{bundle.EditPendataanpendatangkekotasemarangShowAllLink}" immediate="true"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:link outcome="/index" styleClass="btn btn-block btn-success" value="#{bundle.EditPendataanpendatangkekotasemarangIndexLink}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+                <div id="page-content" class="col-sm-1"></div>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</html>

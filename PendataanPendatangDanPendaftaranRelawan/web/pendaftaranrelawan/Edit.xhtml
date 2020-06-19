@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">Formulir Pendaftaran Relawan</ui:define>
+        <ui:define name="body" class=" pace-done">
+            <!--<h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>-->
+            <div class="pace  pace-inactive">
+                <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+                    <div class="pace-progress-inner"></div>
+                </div>
+                <div class="pace-activity"></div>
+            </div>
+            <div id="container" class="cls-container effect">
+                <div id="bg-overlay"></div>
+                <div id="page-content" class="col-sm-1"></div>
+                <div id="page-content" class="col-sm-10">
+                    <div class="panel-body">
+                        <div class="mar-ver pad-btm">
+                            <h1 class="h3">Sunting Data Pendaftaran Relawan</h1>
+                            <p>Silahkan perbarui data.</p>
+                        </div>
+                        <h:form id="demo-bv-accordion" class="form-horizontal bv-form">
+                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                            <div id="demo-accordion" class="panel-group accordion">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-3">Informasi Biodata Anda</a>
+                                        </h4>
+                                    </div>
+                                    <div id="demo-acc-panel-3" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nama Lengkap" for="nama" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="nama" value="#{pendaftaranrelawanController.selected.nama}" title="#{bundle.CreatePendaftaranrelawanTitle_nama}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nomor HP" for="noHP" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="noHP" value="#{pendaftaranrelawanController.selected.noHP}" title="#{bundle.CreatePendaftaranrelawanTitle_noHP}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Email" for="email" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="email" value="#{pendaftaranrelawanController.selected.email}" title="#{bundle.CreatePendaftaranrelawanTitle_email}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Jenis Identitas" for="jnsId" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="jnsId" value="#{pendaftaranrelawanController.selected.jnsId}" title="#{bundle.CreatePendaftaranrelawanTitle_jnsId}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nomor Identitas" for="noId" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="noId" value="#{pendaftaranrelawanController.selected.noId}" title="#{bundle.CreatePendaftaranrelawanTitle_noId}" required="true" requiredMessage="#{bundle.CreatePendaftaranrelawanRequiredMessage_noId}"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Alamat Sesuai Kartu Identitas" for="alamatKId" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="alamatKId" value="#{pendaftaranrelawanController.selected.alamatKId}" title="#{bundle.CreatePendaftaranrelawanTitle_alamatKId}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Jenis Kelamin" for="jenisKlmn" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="jenisKlmn" value="#{pendaftaranrelawanController.selected.jenisKlmn}" title="#{bundle.CreatePendaftaranrelawanTitle_jenisKlmn}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Tempat Tanggal Lahir" for="ttl" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="ttl" value="#{pendaftaranrelawanController.selected.ttl}" title="#{bundle.CreatePendaftaranrelawanTitle_ttl}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Agama" for="agama" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="agama" value="#{pendaftaranrelawanController.selected.agama}" title="#{bundle.CreatePendaftaranrelawanTitle_agama}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Status Perkawinan" for="statusPerkawinan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="statusPerkawinan" value="#{pendaftaranrelawanController.selected.statusPerkawinan}" title="#{bundle.CreatePendaftaranrelawanTitle_statusPerkawinan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Pekerjaan / Aktivitas" for="pekerjaan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="pekerjaan" value="#{pendaftaranrelawanController.selected.pekerjaan}" title="#{bundle.CreatePendaftaranrelawanTitle_pekerjaan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Pendidikan Terakhir" for="pendidikan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="pendidikan" value="#{pendaftaranrelawanController.selected.pendidikan}" title="#{bundle.CreatePendaftaranrelawanTitle_pendidikan}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Golongan Darah" for="goldar" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="goldar" value="#{pendaftaranrelawanController.selected.goldar}" title="#{bundle.CreatePendaftaranrelawanTitle_goldar}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Alamat Domisili" for="alamatDomisili" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="alamatDomisili" value="#{pendaftaranrelawanController.selected.alamatDomisili}" title="#{bundle.CreatePendaftaranrelawanTitle_alamatDomisili}" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendaftaranrelawanController.update}" value="#{bundle.EditPendaftaranrelawanSaveLink}"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:link styleClass="btn btn-block btn-success" outcome="View" value="#{bundle.EditPendaftaranrelawanViewLink}"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendaftaranrelawanController.prepareList}" value="#{bundle.EditPendaftaranrelawanShowAllLink}" immediate="true"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:link styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.EditPendaftaranrelawanIndexLink}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+                <div id="page-content" class="col-sm-1"></div>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</html>

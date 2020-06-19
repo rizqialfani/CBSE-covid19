@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">Pendataan Pendatang Kota Semarang</ui:define>
+        <ui:define name="body" class=" pace-done">
+            <!--<h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>-->
+            <div class="pace  pace-inactive">
+                <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+                    <div class="pace-progress-inner"></div>
+                </div>
+                <div class="pace-activity"></div>
+            </div>
+            <div id="container" class="cls-container effect">
+                <div id="bg-overlay"></div>
+                <div id="page-content" class="col-sm-2"></div>
+                <div id="page-content" class="col-sm-8">
+                    <div class="panel-body">
+                        <div class="mar-ver pad-btm">
+                            <h1 class="h3">Formulir Pendataan Pendatang ke Kota Semarang</h1>
+                            <p>Tercatatnya Anda sebagai Pendatang, Membantu Pengendalian Penularan COVID-19.</p>
+                        </div>
+                        <h:form id="demo-bv-accordion" class="form-horizontal bv-form">
+                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                            <div id="demo-accordion" class="panel-group accordion">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-3">Informasi Biodata Anda</a>
+                                        </h4>
+                                    </div>
+                                    <div id="demo-acc-panel-3" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="NIK" for="nik" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="nik" value="#{pendataanpendatangkekotasemarangController.selected.nik}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_nik}" required="true" requiredMessage="#{bundle.CreatePendataanpendatangkekotasemarangRequiredMessage_nik}" pt:placeholder="Isi NIK anda sesuai KTP/KK"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nama Lengkap" for="nama" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="nama" value="#{pendataanpendatangkekotasemarangController.selected.nama}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_nama}" pt:placeholder="Isi nama lengkap anda"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Umur" for="umur" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="umur" value="#{pendataanpendatangkekotasemarangController.selected.umur}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_umur}" pt:placeholder="Isi umur anda" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nomor Telepon" for="noHP" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="noHP" value="#{pendataanpendatangkekotasemarangController.selected.noHP}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_noHP}" pt:placeholder="Isi nomor telepon anda. Contoh: 0812345678 atau 0248789487"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Jenis Kelamin" for="jenisKelamin" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="jenisKelamin" value="#{pendataanpendatangkekotasemarangController.selected.jenisKelamin}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_jenisKelamin}" pt:placeholder="Isi jenis kelamin anda. Contoh : Laki-laki" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Alamat Rumah / Domisili" for="alamat" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="alamat" value="#{pendataanpendatangkekotasemarangController.selected.alamat}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_alamat}" pt:placeholder="Isikan alamat anda sesuai KTP atau kartu identitas."/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Asal Keberangkatan (Nama Kota)" for="asalKeberangkatan" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="asalKeberangkatan" value="#{pendataanpendatangkekotasemarangController.selected.asalKeberangkatan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_asalKeberangkatan}" pt:placeholder="Isikan nama kota asal keberangkatan. Contoh: Kabupaten Semarang"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Nama Lokasi Kedatangan" for="lokasiKedatangan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="lokasiKedatangan" value="#{pendataanpendatangkekotasemarangController.selected.lokasiKedatangan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_lokasiKedatangan}" pt:placeholder="Contoh : Stasiun Tawang atau Rumah"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Tanggal dan Waktu Kedatangan" for="tanggalWaktuKedatangan" />
+                                                <div class="col-lg-7">
+                                                    <h:inputText styleClass="form-control" id="tanggalWaktuKedatangan" value="#{pendataanpendatangkekotasemarangController.selected.tanggalWaktuKedatangan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_tanggalWaktuKedatangan}" pt:placeholder="Contoh : 19/06/2020 19:30 WIB"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Alamat Tujuan" for="KKKRTRWTujuan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="KKKRTRWTujuan" value="#{pendataanpendatangkekotasemarangController.selected.KKKRTRWTujuan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_KKKRTRWTujuan}" pt:placeholder="Contoh : RT 02, RW 02, Kel. Bulusan, Kec. Tembalang, Kota Semarang"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Lama Berkunjung" for="lamaBerkunjung" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="lamaBerkunjung" value="#{pendataanpendatangkekotasemarangController.selected.lamaBerkunjung}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_lamaBerkunjung}" pt:placeholder="Contoh : 3 hari"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <h:outputLabel class="col-lg-3 control-label text-bold" value="Kondisi Saat Ini" for="kondisiKesehatan" />
+                                                <div class="col-lg-7">                    
+                                                    <h:inputText styleClass="form-control" id="kondisiKesehatan" value="#{pendataanpendatangkekotasemarangController.selected.kondisiKesehatan}" title="#{bundle.CreatePendataanpendatangkekotasemarangTitle_kondisiKesehatan}" pt:placeholder="Contoh : Sehat atau Sedang flu disertai demam."/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.create}" value="#{bundle.CreatePendataanpendatangkekotasemarangSaveLink}" />
+                                            </div>
+                                            <div class="form-group">
+                                                <h:commandLink styleClass="btn btn-block btn-success" action="#{pendataanpendatangkekotasemarangController.prepareList}" value="#{bundle.CreatePendataanpendatangkekotasemarangShowAllLink}" immediate="true" />
+                                            </div>
+                                            <div class="form-group">
+                                                <h:link styleClass="btn btn-block btn-success" outcome="/index" value="#{bundle.CreatePendataanpendatangkekotasemarangIndexLink}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+                <div id="page-content" class="col-sm-2"></div>
+            </div>
+        </ui:define>
+    </ui:composition>
+
+</html>

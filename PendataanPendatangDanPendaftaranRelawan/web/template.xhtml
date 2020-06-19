@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <h:outputStylesheet library="css" name="css.css"/>
+        <h:outputStylesheet library="css" name="nifty.min.css"/>
+        <h:outputStylesheet library="css" name="nifty-demo-icons.min.css"/>
+        <h:outputStylesheet library="css" name="chosen.min.css"/>
+        <h:outputStylesheet library="css" name="pace.min.css"/>
+        <h:outputStylesheet library="css" name="nifty-demo.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrapValidator.min.css"/>
+        <h:outputStylesheet library="css" name="switchery.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-select.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-tagsinput.min.css"/>
+        <h:outputStylesheet library="css" name="chosen.min.css"/>
+        <h:outputStylesheet library="css" name="nouislider.min.css"/>
+        <h:outputStylesheet library="css" name="select2.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-timepicker.min.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-datepicker.min.css"/>
+        <h:outputScript name="plugins/pace/pace.min.js" />
+        <h:outputStylesheet library="css" name="dataTables.bootstrap.min.css"/>
+        <title><ui:insert name="title">Default Title</ui:insert></title>
+        <style>
+            .table>tbody>tr>td, 
+            .table>tbody>tr>th, 
+            .table>tfoot>tr>td, 
+            .table>tfoot>tr>th, 
+            .table>thead>tr>td, 
+            .table>thead>tr>th 
+                {vertical-align: middle !important;
+                text-align: center !important}
+        </style>
+    </h:head>
+
+    <h:body>
+        <p>
+            <ui:insert name="body">Default Body</ui:insert>
+            <h:outputScript name="js/jquery.min.js" />
+            <h:outputScript name="js/bootstrap.min.js" />
+            <h:outputScript name="js/nifty.min.js" />
+            <h:outputScript name="plugins/bootstrap-validator/bootstrapValidator.min.js" />
+            <h:outputScript name="plugins/masked-input/jquery.maskedinput.min.js" />
+            <h:outputScript name="js/demo/form-validation.js" />
+            <h:outputScript name="plugins/bootstrap-select/bootstrap-select.min.js" />
+            <h:outputScript name="plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js" />
+            <h:outputScript name="plugins/chosen/chosen.jquery.min.js" />
+            <h:outputScript name="plugins/noUiSlider/nouislider.min.js" />
+            <h:outputScript name="plugins/select2/js/select2.min.js" />
+            <h:outputScript name="plugins/bootstrap-timepicker/bootstrap-timepicker.min.js" />
+            <h:outputScript name="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js" />
+            <h:outputScript name="js/demo/form-component.js" />
+            <h:outputScript name="js/dataTables.bootstrap.min.js" />
+            <h:outputScript name="js/jquery.dataTables.min.js" />
+            <!--<h:outputScript name="js/jquery-2.2.4.min.js" />-->
+            <script>$('#demo-dp-component .input-group.date').datepicker({autoclose: true});</script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#tabelRelawan").dataTable();
+                });
+            </script>
+        </p>
+    </h:body>
+
+</html>

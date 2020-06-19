@@ -1,0 +1,1134 @@
+<html lang="id"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Form Pendaftaran Relawan</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+    <!--Open Sans Font [ OPTIONAL ]-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="css/nifty.min.css" rel="stylesheet">
+
+
+    <!--Nifty Premium Icon [ DEMONSTRATION ]-->
+    <link href="css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+    <!--=================================================-->
+
+
+
+    <!--Pace - Page Load Progress Par [OPTIONAL]-->
+    <link href="plugins/pace/pace.min.css" rel="stylesheet">
+    <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/2diXFiiA9NsPIBTU15LG6xPf/recaptcha__en.js"></script><script src="plugins/pace/pace.min.js"></script>
+
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="css/demo/nifty-demo.min.css" rel="stylesheet">
+
+
+
+    <!--Bootstrap Validator [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Tags Input [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.css" rel="stylesheet">
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+
+
+    <!--noUiSlider [ OPTIONAL ]-->
+    <link href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet">
+
+
+    <!--Select2 [ OPTIONAL ]-->
+    <link href="plugins/select2/css/select2.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Timepicker [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Datepicker [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+
+    <!--=================================================
+
+    REQUIRED
+    You must include this in your project.
+
+
+    RECOMMENDED
+    This category must be included but you may modify which plugins or components which should be included in your project.
+
+
+    OPTIONAL
+    Optional plugins. You may choose whether to include it in your project or not.
+
+
+    DEMONSTRATION
+    This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+
+    SAMPLE
+    Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+    Detailed information and more samples can be found in the document.
+
+    =================================================-->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body class="  pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+
+    <div id="container" class="cls-container effect">
+        <!-- BACKGROUND IMAGE -->
+        <!--===================================================-->
+        <div id="bg-overlay"></div>
+
+        <!-- DAFTAR FORM -->
+        <!--===================================================-->
+        <div id="page-content" class="col-sm-2"></div>
+        <div id="page-content" class="col-sm-8">
+            <div class="panel-body">
+                <div class="mar-ver pad-btm">
+                    <h1 class="h3">Formulir Pendaftaran Relawan</h1>
+                    <p>Bergabunglah dengan kami dan Mari siapkan data diri Anda.</p>
+                </div>
+                <!-- FORM VALIDATION ON ACCORDION -->
+                <!--===================================================-->
+                <form id="demo-bv-accordion" class="form-horizontal bv-form" action="controllers/process2" method="post" novalidate="novalidate">
+                    <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                    <div id="demo-accordion" class="panel-group accordion">
+
+                        <div class="panel panel-primary">
+
+                            <!-- Accordion title -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-3">Informasi Biodata Anda</a>
+                                </h4>
+                            </div>
+
+                            <!-- Accordion content -->
+                            <div id="demo-acc-panel-3" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <input type="hidden" readonly="" name="tanggal" value="18 Juni 2020">
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Nama Lengkap</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="nama_lengkap" placeholder="Contoh: Abdul Dilan " data-bv-field="nama_lengkap"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="nama_lengkap"></i>
+                                            <small class="help-block text-left">Silahkan isi dengan nama lengkap anda</small>
+                                            <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="nama_lengkap" data-bv-result="NOT_VALIDATED">Nama wajib diisi dan tidak boleh kosong</small><small style="display: none;" class="help-block" data-bv-validator="regexp" data-bv-for="nama_lengkap" data-bv-result="NOT_VALIDATED">Nama hanya dapat terdiri dari karakter dan spasi alfabet</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Nama Panggilan</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="nama_panggilan" placeholder="Contoh: Abdul" data-bv-field="nama_panggilan"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="nama_panggilan"></i>
+                                            <small class="help-block text-left">Silahkan isi dengan nama panggilan anda</small>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="nama_panggilan" data-bv-result="NOT_VALIDATED">Nama panggilan wajib diisi dan tidak boleh kosong</small><small style="display: none;" class="help-block" data-bv-validator="regexp" data-bv-for="nama_panggilan" data-bv-result="NOT_VALIDATED">Nama panggilan hanya dapat terdiri dari karakter dan spasi alfabet</small></div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Nomor Handphone</label>
+                                        <div class="col-lg-7">
+                                            <div class="input-group mar-btm">
+                                                <span class="input-group-addon">+62</span>
+                                                <input type="text" class="form-control" name="nomor_handphone" placeholder="Contoh: 812xxxxxxxx" data-bv-field="nomor_handphone">
+                                            </div><i style="display: none;" class="form-control-feedback bv-icon-input-group" data-bv-icon-for="nomor_handphone"></i>
+                                            <small class="help-block text-left">Pastikan nomor hp telah aktif whatsapp</small>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="nomor_handphone" data-bv-result="NOT_VALIDATED">Nomor Hp wajib diisi dan tidak boleh kosong</small><small style="display: none;" class="help-block" data-bv-validator="digits" data-bv-for="nomor_handphone" data-bv-result="NOT_VALIDATED">Nilai hanya dapat berisi angka</small></div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Email</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="email" placeholder="Contoh: Abdul" data-bv-field="email"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="email"></i>
+                                            <small class="help-block text-left">Pastikan alamat email anda valid</small>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="email" data-bv-result="NOT_VALIDATED">Alamat email wajib diisi dan tidak boleh kosong</small><small style="display: none;" class="help-block" data-bv-validator="emailAddress" data-bv-for="email" data-bv-result="NOT_VALIDATED">Alamat email tidak valid</small></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Jenis Identitas</label>
+                                        <div class="col-lg-7 text-left">
+                                            <div class="btn-group bootstrap-select">
+                                                <select class="selectpicker" name="jenis_identitas" tabindex="-98">
+                                                    <option>KTP</option>
+                                                    <option>SIM</option>
+                                                    <option>PASPOR</option>
+                                                    <option>KARTU PELAJAR</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Nomor Identitas</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="nomor_identitas" placeholder="12345678910xxxxxx" data-bv-field="nomor_identitas"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="nomor_identitas"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="nomor_identitas" data-bv-result="NOT_VALIDATED">Nomor identitas wajib diisi dan tidak boleh kosong</small><small style="display: none;" class="help-block" data-bv-validator="digits" data-bv-for="nomor_identitas" data-bv-result="NOT_VALIDATED">Nilai hanya dapat berisi angka</small></div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Alamat Sesuai Kartu Identitas</label>
+                                        <div class="col-lg-7">
+                                            <textarea placeholder="Alamat" name="alamat" rows="5" class="form-control" data-bv-field="alamat"></textarea><i style="display: none;" class="form-control-feedback" data-bv-icon-for="alamat"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="alamat" data-bv-result="NOT_VALIDATED">Alamat wajib diisi dan tidak boleh kosong</small></div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Jenis Kelamin</label>
+                                        <div class="col-lg-7">
+                                            <div class="radio text-left">
+                                                <input id="demo-inline-form-radio-1" class="magic-radio" type="radio" value="laki-laki" name="jenis_kelamin" data-bv-field="jenis_kelamin">
+                                                <label for="demo-inline-form-radio-1">Laki-laki</label>
+                                                <input id="demo-inline-form-radio-2" class="magic-radio" type="radio" value="perempuan" name="jenis_kelamin" data-bv-field="jenis_kelamin">
+                                                <label for="demo-inline-form-radio-2">Perempuan</label>
+                                            </div>
+                                            <i style="display: none;" class="form-control-feedback" data-bv-icon-for="jenis_kelamin"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="jenis_kelamin" data-bv-result="NOT_VALIDATED">Jenis kelamin diperlukan</small></div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Kota Kelahiran</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="kota_kelahiran" placeholder="Contoh: DKI Jakarta" data-bv-field="kota_kelahiran"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="kota_kelahiran"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="kota_kelahiran" data-bv-result="NOT_VALIDATED">Kota kelahiran wajib diisi dan tidak boleh kosong</small></div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Tanggal Lahir</label>
+                                        <div class="col-lg-7">
+                                            <div id="demo-dp-component">
+                                                <div class="input-group date">
+                                                    <input type="text" class="form-control" name="tanggal_lahir" data-bv-field="tanggal_lahir">
+                                                    <span class="input-group-addon"><i class="demo-pli-calendar-4"></i></span>
+                                                </div>
+                                                <i style="display: none;" class="form-control-feedback bv-icon-input-group" data-bv-icon-for="tanggal_lahir"></i>
+                                            </div>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="tanggal_lahir" data-bv-result="NOT_VALIDATED">Tanggal kelahiran wajib diisi dan tidak boleh kosong</small></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Agama</label>
+                                        <div class="col-lg-7 text-left">
+                                            <div class="btn-group bootstrap-select">
+                                                <select class="selectpicker" name="jenis_identitas" tabindex="-98">
+                                                    <option>Islam</option>
+                                                    <option>Kristen</option>
+                                                    <option>Hindu</option>
+                                                    <option>Budha</option>
+                                                    <option>Katolik</option>
+                                                    <option>Konghucu</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Status Perkawinan</label>
+                                        <div class="col-lg-7">
+                                            <div class="radio text-left">
+                                                <input id="demo-inline-form-radio-3" class="magic-radio" type="radio" name="status_perkawinan" value="Belum Menikah" data-bv-field="status_perkawinan">
+                                                <label for="demo-inline-form-radio-3">Belum Menikah</label>
+                                                <input id="demo-inline-form-radio-4" class="magic-radio" type="radio" name="status_perkawinan" value="Sudah Menikah" data-bv-field="status_perkawinan">
+                                                <label for="demo-inline-form-radio-4">Sudah Menikah</label>
+                                                <input id="demo-inline-form-radio-5" class="magic-radio" type="radio" name="status_perkawinan" value="Duda/Janda" data-bv-field="status_perkawinan">
+                                                <label for="demo-inline-form-radio-5">Duda/Janda</label>
+                                            </div><i style="display: none;" class="form-control-feedback" data-bv-icon-for="status_perkawinan"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="status_perkawinan" data-bv-result="NOT_VALIDATED">Status pernikawinan diperlukan</small></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Pekerjaan / Aktivitas</label>
+                                        <div class="col-lg-7 text-left">
+                                            <div class="btn-group bootstrap-select">
+                                                <select class="selectpicker" name="jenis_identitas" tabindex="-98">
+                                                    <option>Dokter</option>
+                                                    <option>Guru</option>
+                                                    <option>Karyawan Swasta</option>
+                                                    <option>Pelajar</option>
+                                                    <option>Mahasiswa</option>
+                                                    <option>Wiraswasta</option>
+                                                    <option>Lainya</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Pendidikan terakhir</label>
+                                        <div class="col-lg-7 text-left">
+                                            <div class="btn-group bootstrap-select">
+                                                <select class="selectpicker" name="jenis_identitas" tabindex="-98">
+                                                    <option>SD/Sederajat</option>
+                                                    <option>SMP/Sedderajat</option>
+                                                    <option>SMA/Sederajat</option>
+                                                    <option>Diploma</option>
+                                                    <option>Sarjana (S1)</option>
+                                                    <option>Master (S2)</option>
+                                                    <option>Doktor (S3)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Golongan Darah</label>
+                                        <div class="col-lg-7">
+                                            <div class="radio text-left">
+                                                <input id="demo-inline-form-radio-6" class="magic-radio" type="radio" name="golongan_darah" value="A" data-bv-field="golongan_darah">
+                                                <label for="demo-inline-form-radio-6">A</label>
+                                                <input id="demo-inline-form-radio-7" class="magic-radio" type="radio" name="golongan_darah" value="AB" data-bv-field="golongan_darah">
+                                                <label for="demo-inline-form-radio-7">AB</label>
+                                                <input id="demo-inline-form-radio-8" class="magic-radio" type="radio" name="golongan_darah" value="B" data-bv-field="golongan_darah">
+                                                <label for="demo-inline-form-radio-8">B</label>
+                                                <input id="demo-inline-form-radio-9" class="magic-radio" type="radio" name="golongan_darah" value="O" data-bv-field="golongan_darah">
+                                                <label for="demo-inline-form-radio-9">O</label>
+                                            </div><i style="display: none;" class="form-control-feedback" data-bv-icon-for="golongan_darah"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="golongan_darah" data-bv-result="NOT_VALIDATED">Status pernikawinan diperlukan</small></div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group has-feedback">
+                                        <label class="col-lg-3 control-label text-bold">Alamat Domisili</label>
+                                        <div class="col-lg-7">
+                                            <textarea placeholder="Alamat domisili" name="alamat_domisili" rows="5" class="form-control" data-bv-field="alamat_domisili"></textarea><i style="display: none;" class="form-control-feedback" data-bv-icon-for="alamat_domisili"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="alamat_domisili" data-bv-result="NOT_VALIDATED">Alamat domisili diperlukan</small></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Provinsi, Kota/Kabupaten</label>
+                                        <div class="col-lg-7 text-left">
+                                            <select id="demo-chosen-select" tabindex="-1" name="provinsi">
+                                                                                                        <option value="KAB. ACEH SELATAN, Aceh">KAB. ACEH SELATAN, Aceh</option>
+                                                                                                        <option value="KAB. ACEH TENGGARA, Aceh">KAB. ACEH TENGGARA, Aceh</option>
+                                                                                                        <option value="KAB. ACEH TIMUR, Aceh">KAB. ACEH TIMUR, Aceh</option>
+                                                                                                        <option value="KAB. ACEH TENGAH, Aceh">KAB. ACEH TENGAH, Aceh</option>
+                                                                                                        <option value="KAB. ACEH BARAT, Aceh">KAB. ACEH BARAT, Aceh</option>
+                                                                                                        <option value="KAB. ACEH BESAR, Aceh">KAB. ACEH BESAR, Aceh</option>
+                                                                                                        <option value="KAB. PIDIE, Aceh">KAB. PIDIE, Aceh</option>
+                                                                                                        <option value="KAB. ACEH UTARA, Aceh">KAB. ACEH UTARA, Aceh</option>
+                                                                                                        <option value="KAB. SIMEULUE, Aceh">KAB. SIMEULUE, Aceh</option>
+                                                                                                        <option value="KAB. ACEH SINGKIL, Aceh">KAB. ACEH SINGKIL, Aceh</option>
+                                                                                                        <option value="KAB. BIREUEN, Aceh">KAB. BIREUEN, Aceh</option>
+                                                                                                        <option value="KAB. ACEH BARAT DAYA, Aceh">KAB. ACEH BARAT DAYA, Aceh</option>
+                                                                                                        <option value="KAB. GAYO LUES, Aceh">KAB. GAYO LUES, Aceh</option>
+                                                                                                        <option value="KAB. ACEH JAYA, Aceh">KAB. ACEH JAYA, Aceh</option>
+                                                                                                        <option value="KAB. NAGAN RAYA, Aceh">KAB. NAGAN RAYA, Aceh</option>
+                                                                                                        <option value="KAB. ACEH TAMIANG, Aceh">KAB. ACEH TAMIANG, Aceh</option>
+                                                                                                        <option value="KAB. BENER MERIAH, Aceh">KAB. BENER MERIAH, Aceh</option>
+                                                                                                        <option value="KAB. PIDIE JAYA, Aceh">KAB. PIDIE JAYA, Aceh</option>
+                                                                                                        <option value="KOTA BANDA ACEH, Aceh">KOTA BANDA ACEH, Aceh</option>
+                                                                                                        <option value="KOTA SABANG, Aceh">KOTA SABANG, Aceh</option>
+                                                                                                        <option value="KOTA LHOKSEUMAWE, Aceh">KOTA LHOKSEUMAWE, Aceh</option>
+                                                                                                        <option value="KOTA LANGSA, Aceh">KOTA LANGSA, Aceh</option>
+                                                                                                        <option value="KOTA SUBULUSSALAM, Aceh">KOTA SUBULUSSALAM, Aceh</option>
+                                                                                                        <option value="KAB. TAPANULI TENGAH, Sumatera Utara">KAB. TAPANULI TENGAH, Sumatera Utara</option>
+                                                                                                        <option value="KAB. TAPANULI UTARA, Sumatera Utara">KAB. TAPANULI UTARA, Sumatera Utara</option>
+                                                                                                        <option value="KAB. TAPANULI SELATAN, Sumatera Utara">KAB. TAPANULI SELATAN, Sumatera Utara</option>
+                                                                                                        <option value="KAB. NIAS, Sumatera Utara">KAB. NIAS, Sumatera Utara</option>
+                                                                                                        <option value="KAB. LANGKAT, Sumatera Utara">KAB. LANGKAT, Sumatera Utara</option>
+                                                                                                        <option value="KAB. KARO, Sumatera Utara">KAB. KARO, Sumatera Utara</option>
+                                                                                                        <option value="KAB. DELI SERDANG, Sumatera Utara">KAB. DELI SERDANG, Sumatera Utara</option>
+                                                                                                        <option value="KAB. SIMALUNGUN, Sumatera Utara">KAB. SIMALUNGUN, Sumatera Utara</option>
+                                                                                                        <option value="KAB. ASAHAN, Sumatera Utara">KAB. ASAHAN, Sumatera Utara</option>
+                                                                                                        <option value="KAB. LABUHANBATU, Sumatera Utara">KAB. LABUHANBATU, Sumatera Utara</option>
+                                                                                                        <option value="KAB. DAIRI, Sumatera Utara">KAB. DAIRI, Sumatera Utara</option>
+                                                                                                        <option value="KAB. TOBA SAMOSIR, Sumatera Utara">KAB. TOBA SAMOSIR, Sumatera Utara</option>
+                                                                                                        <option value="KAB. MANDAILING NATAL, Sumatera Utara">KAB. MANDAILING NATAL, Sumatera Utara</option>
+                                                                                                        <option value="KAB. NIAS SELATAN, Sumatera Utara">KAB. NIAS SELATAN, Sumatera Utara</option>
+                                                                                                        <option value="KAB. PAKPAK BHARAT, Sumatera Utara">KAB. PAKPAK BHARAT, Sumatera Utara</option>
+                                                                                                        <option value="KAB. HUMBANG HASUNDUTAN, Sumatera Utara">KAB. HUMBANG HASUNDUTAN, Sumatera Utara</option>
+                                                                                                        <option value="KAB. SAMOSIR, Sumatera Utara">KAB. SAMOSIR, Sumatera Utara</option>
+                                                                                                        <option value="KAB. SERDANG BEDAGAI, Sumatera Utara">KAB. SERDANG BEDAGAI, Sumatera Utara</option>
+                                                                                                        <option value="KAB. BATU BARA, Sumatera Utara">KAB. BATU BARA, Sumatera Utara</option>
+                                                                                                        <option value="KAB. PADANG LAWAS UTARA, Sumatera Utara">KAB. PADANG LAWAS UTARA, Sumatera Utara</option>
+                                                                                                        <option value="KAB. PADANG LAWAS, Sumatera Utara">KAB. PADANG LAWAS, Sumatera Utara</option>
+                                                                                                        <option value="KAB. LABUHANBATU SELATAN, Sumatera Utara">KAB. LABUHANBATU SELATAN, Sumatera Utara</option>
+                                                                                                        <option value="KAB. LABUHANBATU UTARA, Sumatera Utara">KAB. LABUHANBATU UTARA, Sumatera Utara</option>
+                                                                                                        <option value="KAB. NIAS UTARA, Sumatera Utara">KAB. NIAS UTARA, Sumatera Utara</option>
+                                                                                                        <option value="KAB. NIAS BARAT, Sumatera Utara">KAB. NIAS BARAT, Sumatera Utara</option>
+                                                                                                        <option value="KOTA MEDAN, Sumatera Utara">KOTA MEDAN, Sumatera Utara</option>
+                                                                                                        <option value="KOTA PEMATANG SIANTAR, Sumatera Utara">KOTA PEMATANG SIANTAR, Sumatera Utara</option>
+                                                                                                        <option value="KOTA SIBOLGA, Sumatera Utara">KOTA SIBOLGA, Sumatera Utara</option>
+                                                                                                        <option value="KOTA TANJUNG BALAI, Sumatera Utara">KOTA TANJUNG BALAI, Sumatera Utara</option>
+                                                                                                        <option value="KOTA BINJAI, Sumatera Utara">KOTA BINJAI, Sumatera Utara</option>
+                                                                                                        <option value="KOTA TEBING TINGGI, Sumatera Utara">KOTA TEBING TINGGI, Sumatera Utara</option>
+                                                                                                        <option value="KOTA PADANGSIDIMPUAN, Sumatera Utara">KOTA PADANGSIDIMPUAN, Sumatera Utara</option>
+                                                                                                        <option value="KOTA GUNUNGSITOLI, Sumatera Utara">KOTA GUNUNGSITOLI, Sumatera Utara</option>
+                                                                                                        <option value="KAB. PESISIR SELATAN, Sumatera Barat">KAB. PESISIR SELATAN, Sumatera Barat</option>
+                                                                                                        <option value="KAB. SOLOK, Sumatera Barat">KAB. SOLOK, Sumatera Barat</option>
+                                                                                                        <option value="KAB. SIJUNJUNG, Sumatera Barat">KAB. SIJUNJUNG, Sumatera Barat</option>
+                                                                                                        <option value="KAB. TANAH DATAR, Sumatera Barat">KAB. TANAH DATAR, Sumatera Barat</option>
+                                                                                                        <option value="KAB. PADANG PARIAMAN, Sumatera Barat">KAB. PADANG PARIAMAN, Sumatera Barat</option>
+                                                                                                        <option value="KAB. AGAM, Sumatera Barat">KAB. AGAM, Sumatera Barat</option>
+                                                                                                        <option value="KAB. LIMA PULUH KOTA, Sumatera Barat">KAB. LIMA PULUH KOTA, Sumatera Barat</option>
+                                                                                                        <option value="KAB. PASAMAN, Sumatera Barat">KAB. PASAMAN, Sumatera Barat</option>
+                                                                                                        <option value="KAB. KEPULAUAN MENTAWAI, Sumatera Barat">KAB. KEPULAUAN MENTAWAI, Sumatera Barat</option>
+                                                                                                        <option value="KAB. DHARMASRAYA, Sumatera Barat">KAB. DHARMASRAYA, Sumatera Barat</option>
+                                                                                                        <option value="KAB. SOLOK SELATAN, Sumatera Barat">KAB. SOLOK SELATAN, Sumatera Barat</option>
+                                                                                                        <option value="KAB. PASAMAN BARAT, Sumatera Barat">KAB. PASAMAN BARAT, Sumatera Barat</option>
+                                                                                                        <option value="KOTA PADANG, Sumatera Barat">KOTA PADANG, Sumatera Barat</option>
+                                                                                                        <option value="KOTA SOLOK, Sumatera Barat">KOTA SOLOK, Sumatera Barat</option>
+                                                                                                        <option value="KOTA SAWAHLUNTO, Sumatera Barat">KOTA SAWAHLUNTO, Sumatera Barat</option>
+                                                                                                        <option value="KOTA PADANG PANJANG, Sumatera Barat">KOTA PADANG PANJANG, Sumatera Barat</option>
+                                                                                                        <option value="KOTA BUKITTINGGI, Sumatera Barat">KOTA BUKITTINGGI, Sumatera Barat</option>
+                                                                                                        <option value="KOTA PAYAKUMBUH, Sumatera Barat">KOTA PAYAKUMBUH, Sumatera Barat</option>
+                                                                                                        <option value="KOTA PARIAMAN, Sumatera Barat">KOTA PARIAMAN, Sumatera Barat</option>
+                                                                                                        <option value="KAB. KAMPAR, Riau">KAB. KAMPAR, Riau</option>
+                                                                                                        <option value="KAB. INDRAGIRI HULU, Riau">KAB. INDRAGIRI HULU, Riau</option>
+                                                                                                        <option value="KAB. BENGKALIS, Riau">KAB. BENGKALIS, Riau</option>
+                                                                                                        <option value="KAB. INDRAGIRI HILIR, Riau">KAB. INDRAGIRI HILIR, Riau</option>
+                                                                                                        <option value="KAB. PELALAWAN, Riau">KAB. PELALAWAN, Riau</option>
+                                                                                                        <option value="KAB. ROKAN HULU, Riau">KAB. ROKAN HULU, Riau</option>
+                                                                                                        <option value="KAB. ROKAN HILIR, Riau">KAB. ROKAN HILIR, Riau</option>
+                                                                                                        <option value="KAB. SIAK, Riau">KAB. SIAK, Riau</option>
+                                                                                                        <option value="KAB. KUANTAN SINGINGI, Riau">KAB. KUANTAN SINGINGI, Riau</option>
+                                                                                                        <option value="KAB. KEPULAUAN MERANTI, Riau">KAB. KEPULAUAN MERANTI, Riau</option>
+                                                                                                        <option value="KOTA PEKANBARU, Riau">KOTA PEKANBARU, Riau</option>
+                                                                                                        <option value="KOTA DUMAI, Riau">KOTA DUMAI, Riau</option>
+                                                                                                        <option value="KAB. KERINCI, Jambi">KAB. KERINCI, Jambi</option>
+                                                                                                        <option value="KAB. MERANGIN, Jambi">KAB. MERANGIN, Jambi</option>
+                                                                                                        <option value="KAB. SAROLANGUN, Jambi">KAB. SAROLANGUN, Jambi</option>
+                                                                                                        <option value="KAB. BATANGHARI, Jambi">KAB. BATANGHARI, Jambi</option>
+                                                                                                        <option value="KAB. MUARO JAMBI, Jambi">KAB. MUARO JAMBI, Jambi</option>
+                                                                                                        <option value="KAB. TANJUNG JABUNG BARAT, Jambi">KAB. TANJUNG JABUNG BARAT, Jambi</option>
+                                                                                                        <option value="KAB. TANJUNG JABUNG TIMUR, Jambi">KAB. TANJUNG JABUNG TIMUR, Jambi</option>
+                                                                                                        <option value="KAB. BUNGO, Jambi">KAB. BUNGO, Jambi</option>
+                                                                                                        <option value="KAB. TEBO, Jambi">KAB. TEBO, Jambi</option>
+                                                                                                        <option value="KOTA JAMBI, Jambi">KOTA JAMBI, Jambi</option>
+                                                                                                        <option value="KOTA SUNGAI PENUH, Jambi">KOTA SUNGAI PENUH, Jambi</option>
+                                                                                                        <option value="KAB. OGAN KOMERING ULU, Sumatera Selatan">KAB. OGAN KOMERING ULU, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. OGAN KOMERING ILIR, Sumatera Selatan">KAB. OGAN KOMERING ILIR, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. MUARA ENIM, Sumatera Selatan">KAB. MUARA ENIM, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. LAHAT, Sumatera Selatan">KAB. LAHAT, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. MUSI RAWAS, Sumatera Selatan">KAB. MUSI RAWAS, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. MUSI BANYUASIN, Sumatera Selatan">KAB. MUSI BANYUASIN, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. BANYUASIN, Sumatera Selatan">KAB. BANYUASIN, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. OGAN KOMERING ULU TIMUR, Sumatera Selatan">KAB. OGAN KOMERING ULU TIMUR, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. OGAN KOMERING ULU SELATAN, Sumatera Selatan">KAB. OGAN KOMERING ULU SELATAN, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. OGAN ILIR, Sumatera Selatan">KAB. OGAN ILIR, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. EMPAT LAWANG, Sumatera Selatan">KAB. EMPAT LAWANG, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. PENUKAL ABAB LEMATANG ILIR, Sumatera Selatan">KAB. PENUKAL ABAB LEMATANG ILIR, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. MUSI RAWAS UTARA, Sumatera Selatan">KAB. MUSI RAWAS UTARA, Sumatera Selatan</option>
+                                                                                                        <option value="KOTA PALEMBANG, Sumatera Selatan">KOTA PALEMBANG, Sumatera Selatan</option>
+                                                                                                        <option value="KOTA PAGAR ALAM, Sumatera Selatan">KOTA PAGAR ALAM, Sumatera Selatan</option>
+                                                                                                        <option value="KOTA LUBUK LINGGAU, Sumatera Selatan">KOTA LUBUK LINGGAU, Sumatera Selatan</option>
+                                                                                                        <option value="KOTA PRABUMULIH, Sumatera Selatan">KOTA PRABUMULIH, Sumatera Selatan</option>
+                                                                                                        <option value="KAB. BENGKULU SELATAN, Bengkulu">KAB. BENGKULU SELATAN, Bengkulu</option>
+                                                                                                        <option value="KAB. REJANG LEBONG, Bengkulu">KAB. REJANG LEBONG, Bengkulu</option>
+                                                                                                        <option value="KAB. BENGKULU UTARA, Bengkulu">KAB. BENGKULU UTARA, Bengkulu</option>
+                                                                                                        <option value="KAB. KAUR, Bengkulu">KAB. KAUR, Bengkulu</option>
+                                                                                                        <option value="KAB. SELUMA, Bengkulu">KAB. SELUMA, Bengkulu</option>
+                                                                                                        <option value="KAB. MUKO MUKO, Bengkulu">KAB. MUKO MUKO, Bengkulu</option>
+                                                                                                        <option value="KAB. LEBONG, Bengkulu">KAB. LEBONG, Bengkulu</option>
+                                                                                                        <option value="KAB. KEPAHIANG, Bengkulu">KAB. KEPAHIANG, Bengkulu</option>
+                                                                                                        <option value="KAB. BENGKULU TENGAH, Bengkulu">KAB. BENGKULU TENGAH, Bengkulu</option>
+                                                                                                        <option value="KOTA BENGKULU, Bengkulu">KOTA BENGKULU, Bengkulu</option>
+                                                                                                        <option value="KAB. LAMPUNG SELATAN, Lampung">KAB. LAMPUNG SELATAN, Lampung</option>
+                                                                                                        <option value="KAB. LAMPUNG TENGAH, Lampung">KAB. LAMPUNG TENGAH, Lampung</option>
+                                                                                                        <option value="KAB. LAMPUNG UTARA, Lampung">KAB. LAMPUNG UTARA, Lampung</option>
+                                                                                                        <option value="KAB. LAMPUNG BARAT, Lampung">KAB. LAMPUNG BARAT, Lampung</option>
+                                                                                                        <option value="KAB. TULANG BAWANG, Lampung">KAB. TULANG BAWANG, Lampung</option>
+                                                                                                        <option value="KAB. TANGGAMUS, Lampung">KAB. TANGGAMUS, Lampung</option>
+                                                                                                        <option value="KAB. LAMPUNG TIMUR, Lampung">KAB. LAMPUNG TIMUR, Lampung</option>
+                                                                                                        <option value="KAB. WAY KANAN, Lampung">KAB. WAY KANAN, Lampung</option>
+                                                                                                        <option value="KAB. PESAWARAN, Lampung">KAB. PESAWARAN, Lampung</option>
+                                                                                                        <option value="KAB. PRINGSEWU, Lampung">KAB. PRINGSEWU, Lampung</option>
+                                                                                                        <option value="KAB. MESUJI, Lampung">KAB. MESUJI, Lampung</option>
+                                                                                                        <option value="KAB. TULANG BAWANG BARAT, Lampung">KAB. TULANG BAWANG BARAT, Lampung</option>
+                                                                                                        <option value="KAB. PESISIR BARAT, Lampung">KAB. PESISIR BARAT, Lampung</option>
+                                                                                                        <option value="KOTA BANDAR LAMPUNG, Lampung">KOTA BANDAR LAMPUNG, Lampung</option>
+                                                                                                        <option value="KOTA METRO, Lampung">KOTA METRO, Lampung</option>
+                                                                                                        <option value="KAB. BANGKA, Kepulauan Bangka Belitung">KAB. BANGKA, Kepulauan Bangka Belitung</option>
+                                                                                                        <option value="KAB. BELITUNG, Kepulauan Bangka Belitung">KAB. BELITUNG, Kepulauan Bangka Belitung</option>
+                                                                                                        <option value="KAB. BANGKA SELATAN, Kepulauan Bangka Belitung">KAB. BANGKA SELATAN, Kepulauan Bangka Belitung</option>
+                                                                                                        <option value="KAB. BANGKA TENGAH, Kepulauan Bangka Belitung">KAB. BANGKA TENGAH, Kepulauan Bangka Belitung</option>
+                                                                                                        <option value="KAB. BANGKA BARAT, Kepulauan Bangka Belitung">KAB. BANGKA BARAT, Kepulauan Bangka Belitung</option>
+                                                                                                        <option value="KAB. BELITUNG TIMUR, Kepulauan Bangka Belitung">KAB. BELITUNG TIMUR, Kepulauan Bangka Belitung</option>
+                                                                                                        <option value="KOTA PANGKAL PINANG, Kepulauan Bangka Belitung">KOTA PANGKAL PINANG, Kepulauan Bangka Belitung</option>
+                                                                                                        <option value="KAB. BINTAN, Kepulauan Riau">KAB. BINTAN, Kepulauan Riau</option>
+                                                                                                        <option value="KAB. KARIMUN, Kepulauan Riau">KAB. KARIMUN, Kepulauan Riau</option>
+                                                                                                        <option value="KAB. NATUNA, Kepulauan Riau">KAB. NATUNA, Kepulauan Riau</option>
+                                                                                                        <option value="KAB. LINGGA, Kepulauan Riau">KAB. LINGGA, Kepulauan Riau</option>
+                                                                                                        <option value="KAB. KEPULAUAN ANAMBAS, Kepulauan Riau">KAB. KEPULAUAN ANAMBAS, Kepulauan Riau</option>
+                                                                                                        <option value="KOTA BATAM, Kepulauan Riau">KOTA BATAM, Kepulauan Riau</option>
+                                                                                                        <option value="KOTA TANJUNG PINANG, Kepulauan Riau">KOTA TANJUNG PINANG, Kepulauan Riau</option>
+                                                                                                        <option value="KAB. ADM. KEP. SERIBU, DKI Jakarta">KAB. ADM. KEP. SERIBU, DKI Jakarta</option>
+                                                                                                        <option value="KOTA ADM. JAKARTA PUSAT, DKI Jakarta">KOTA ADM. JAKARTA PUSAT, DKI Jakarta</option>
+                                                                                                        <option value="KOTA ADM. JAKARTA UTARA, DKI Jakarta">KOTA ADM. JAKARTA UTARA, DKI Jakarta</option>
+                                                                                                        <option value="KOTA ADM. JAKARTA BARAT, DKI Jakarta">KOTA ADM. JAKARTA BARAT, DKI Jakarta</option>
+                                                                                                        <option value="KOTA ADM. JAKARTA SELATAN, DKI Jakarta">KOTA ADM. JAKARTA SELATAN, DKI Jakarta</option>
+                                                                                                        <option value="KOTA ADM. JAKARTA TIMUR, DKI Jakarta">KOTA ADM. JAKARTA TIMUR, DKI Jakarta</option>
+                                                                                                        <option value="KAB. BOGOR, Jawa Barat">KAB. BOGOR, Jawa Barat</option>
+                                                                                                        <option value="KAB. SUKABUMI, Jawa Barat">KAB. SUKABUMI, Jawa Barat</option>
+                                                                                                        <option value="KAB. CIANJUR, Jawa Barat">KAB. CIANJUR, Jawa Barat</option>
+                                                                                                        <option value="KAB. BANDUNG, Jawa Barat">KAB. BANDUNG, Jawa Barat</option>
+                                                                                                        <option value="KAB. GARUT, Jawa Barat">KAB. GARUT, Jawa Barat</option>
+                                                                                                        <option value="KAB. TASIKMALAYA, Jawa Barat">KAB. TASIKMALAYA, Jawa Barat</option>
+                                                                                                        <option value="KAB. CIAMIS, Jawa Barat">KAB. CIAMIS, Jawa Barat</option>
+                                                                                                        <option value="KAB. KUNINGAN, Jawa Barat">KAB. KUNINGAN, Jawa Barat</option>
+                                                                                                        <option value="KAB. CIREBON, Jawa Barat">KAB. CIREBON, Jawa Barat</option>
+                                                                                                        <option value="KAB. MAJALENGKA, Jawa Barat">KAB. MAJALENGKA, Jawa Barat</option>
+                                                                                                        <option value="KAB. SUMEDANG, Jawa Barat">KAB. SUMEDANG, Jawa Barat</option>
+                                                                                                        <option value="KAB. INDRAMAYU, Jawa Barat">KAB. INDRAMAYU, Jawa Barat</option>
+                                                                                                        <option value="KAB. SUBANG, Jawa Barat">KAB. SUBANG, Jawa Barat</option>
+                                                                                                        <option value="KAB. PURWAKARTA, Jawa Barat">KAB. PURWAKARTA, Jawa Barat</option>
+                                                                                                        <option value="KAB. KARAWANG, Jawa Barat">KAB. KARAWANG, Jawa Barat</option>
+                                                                                                        <option value="KAB. BEKASI, Jawa Barat">KAB. BEKASI, Jawa Barat</option>
+                                                                                                        <option value="KAB. BANDUNG BARAT, Jawa Barat">KAB. BANDUNG BARAT, Jawa Barat</option>
+                                                                                                        <option value="KAB. PANGANDARAN, Jawa Barat">KAB. PANGANDARAN, Jawa Barat</option>
+                                                                                                        <option value="KOTA BOGOR, Jawa Barat">KOTA BOGOR, Jawa Barat</option>
+                                                                                                        <option value="KOTA SUKABUMI, Jawa Barat">KOTA SUKABUMI, Jawa Barat</option>
+                                                                                                        <option value="KOTA BANDUNG, Jawa Barat">KOTA BANDUNG, Jawa Barat</option>
+                                                                                                        <option value="KOTA CIREBON, Jawa Barat">KOTA CIREBON, Jawa Barat</option>
+                                                                                                        <option value="KOTA BEKASI, Jawa Barat">KOTA BEKASI, Jawa Barat</option>
+                                                                                                        <option value="KOTA DEPOK, Jawa Barat">KOTA DEPOK, Jawa Barat</option>
+                                                                                                        <option value="KOTA CIMAHI, Jawa Barat">KOTA CIMAHI, Jawa Barat</option>
+                                                                                                        <option value="KOTA TASIKMALAYA, Jawa Barat">KOTA TASIKMALAYA, Jawa Barat</option>
+                                                                                                        <option value="KOTA BANJAR, Jawa Barat">KOTA BANJAR, Jawa Barat</option>
+                                                                                                        <option value="KAB. CILACAP, Jawa Tengah">KAB. CILACAP, Jawa Tengah</option>
+                                                                                                        <option value="KAB. BANYUMAS, Jawa Tengah">KAB. BANYUMAS, Jawa Tengah</option>
+                                                                                                        <option value="KAB. PURBALINGGA, Jawa Tengah">KAB. PURBALINGGA, Jawa Tengah</option>
+                                                                                                        <option value="KAB. BANJARNEGARA, Jawa Tengah">KAB. BANJARNEGARA, Jawa Tengah</option>
+                                                                                                        <option value="KAB. KEBUMEN, Jawa Tengah">KAB. KEBUMEN, Jawa Tengah</option>
+                                                                                                        <option value="KAB. PURWOREJO, Jawa Tengah">KAB. PURWOREJO, Jawa Tengah</option>
+                                                                                                        <option value="KAB. WONOSOBO, Jawa Tengah">KAB. WONOSOBO, Jawa Tengah</option>
+                                                                                                        <option value="KAB. MAGELANG, Jawa Tengah">KAB. MAGELANG, Jawa Tengah</option>
+                                                                                                        <option value="KAB. BOYOLALI, Jawa Tengah">KAB. BOYOLALI, Jawa Tengah</option>
+                                                                                                        <option value="KAB. KLATEN, Jawa Tengah">KAB. KLATEN, Jawa Tengah</option>
+                                                                                                        <option value="KAB. SUKOHARJO, Jawa Tengah">KAB. SUKOHARJO, Jawa Tengah</option>
+                                                                                                        <option value="KAB. WONOGIRI, Jawa Tengah">KAB. WONOGIRI, Jawa Tengah</option>
+                                                                                                        <option value="KAB. KARANGANYAR, Jawa Tengah">KAB. KARANGANYAR, Jawa Tengah</option>
+                                                                                                        <option value="KAB. SRAGEN, Jawa Tengah">KAB. SRAGEN, Jawa Tengah</option>
+                                                                                                        <option value="KAB. GROBOGAN, Jawa Tengah">KAB. GROBOGAN, Jawa Tengah</option>
+                                                                                                        <option value="KAB. BLORA, Jawa Tengah">KAB. BLORA, Jawa Tengah</option>
+                                                                                                        <option value="KAB. REMBANG, Jawa Tengah">KAB. REMBANG, Jawa Tengah</option>
+                                                                                                        <option value="KAB. PATI, Jawa Tengah">KAB. PATI, Jawa Tengah</option>
+                                                                                                        <option value="KAB. KUDUS, Jawa Tengah">KAB. KUDUS, Jawa Tengah</option>
+                                                                                                        <option value="KAB. JEPARA, Jawa Tengah">KAB. JEPARA, Jawa Tengah</option>
+                                                                                                        <option value="KAB. DEMAK, Jawa Tengah">KAB. DEMAK, Jawa Tengah</option>
+                                                                                                        <option value="KAB. SEMARANG, Jawa Tengah">KAB. SEMARANG, Jawa Tengah</option>
+                                                                                                        <option value="KAB. TEMANGGUNG, Jawa Tengah">KAB. TEMANGGUNG, Jawa Tengah</option>
+                                                                                                        <option value="KAB. KENDAL, Jawa Tengah">KAB. KENDAL, Jawa Tengah</option>
+                                                                                                        <option value="KAB. BATANG, Jawa Tengah">KAB. BATANG, Jawa Tengah</option>
+                                                                                                        <option value="KAB. PEKALONGAN, Jawa Tengah">KAB. PEKALONGAN, Jawa Tengah</option>
+                                                                                                        <option value="KAB. PEMALANG, Jawa Tengah">KAB. PEMALANG, Jawa Tengah</option>
+                                                                                                        <option value="KAB. TEGAL, Jawa Tengah">KAB. TEGAL, Jawa Tengah</option>
+                                                                                                        <option value="KAB. BREBES, Jawa Tengah">KAB. BREBES, Jawa Tengah</option>
+                                                                                                        <option value="KOTA MAGELANG, Jawa Tengah">KOTA MAGELANG, Jawa Tengah</option>
+                                                                                                        <option value="KOTA SURAKARTA, Jawa Tengah">KOTA SURAKARTA, Jawa Tengah</option>
+                                                                                                        <option value="KOTA SALATIGA, Jawa Tengah">KOTA SALATIGA, Jawa Tengah</option>
+                                                                                                        <option value="KOTA SEMARANG, Jawa Tengah">KOTA SEMARANG, Jawa Tengah</option>
+                                                                                                        <option value="KOTA PEKALONGAN, Jawa Tengah">KOTA PEKALONGAN, Jawa Tengah</option>
+                                                                                                        <option value="KOTA TEGAL, Jawa Tengah">KOTA TEGAL, Jawa Tengah</option>
+                                                                                                        <option value="KAB. KULON PROGO, DI Yogyakarta">KAB. KULON PROGO, DI Yogyakarta</option>
+                                                                                                        <option value="KAB. BANTUL, DI Yogyakarta">KAB. BANTUL, DI Yogyakarta</option>
+                                                                                                        <option value="KAB. GUNUNG KIDUL, DI Yogyakarta">KAB. GUNUNG KIDUL, DI Yogyakarta</option>
+                                                                                                        <option value="KAB. SLEMAN, DI Yogyakarta">KAB. SLEMAN, DI Yogyakarta</option>
+                                                                                                        <option value="KOTA YOGYAKARTA, DI Yogyakarta">KOTA YOGYAKARTA, DI Yogyakarta</option>
+                                                                                                        <option value="KAB. PACITAN, Jawa Timur">KAB. PACITAN, Jawa Timur</option>
+                                                                                                        <option value="KAB. PONOROGO, Jawa Timur">KAB. PONOROGO, Jawa Timur</option>
+                                                                                                        <option value="KAB. TRENGGALEK, Jawa Timur">KAB. TRENGGALEK, Jawa Timur</option>
+                                                                                                        <option value="KAB. TULUNGAGUNG, Jawa Timur">KAB. TULUNGAGUNG, Jawa Timur</option>
+                                                                                                        <option value="KAB. BLITAR, Jawa Timur">KAB. BLITAR, Jawa Timur</option>
+                                                                                                        <option value="KAB. KEDIRI, Jawa Timur">KAB. KEDIRI, Jawa Timur</option>
+                                                                                                        <option value="KAB. MALANG, Jawa Timur">KAB. MALANG, Jawa Timur</option>
+                                                                                                        <option value="KAB. LUMAJANG, Jawa Timur">KAB. LUMAJANG, Jawa Timur</option>
+                                                                                                        <option value="KAB. JEMBER, Jawa Timur">KAB. JEMBER, Jawa Timur</option>
+                                                                                                        <option value="KAB. BANYUWANGI, Jawa Timur">KAB. BANYUWANGI, Jawa Timur</option>
+                                                                                                        <option value="KAB. BONDOWOSO, Jawa Timur">KAB. BONDOWOSO, Jawa Timur</option>
+                                                                                                        <option value="KAB. SITUBONDO, Jawa Timur">KAB. SITUBONDO, Jawa Timur</option>
+                                                                                                        <option value="KAB. PROBOLINGGO, Jawa Timur">KAB. PROBOLINGGO, Jawa Timur</option>
+                                                                                                        <option value="KAB. PASURUAN, Jawa Timur">KAB. PASURUAN, Jawa Timur</option>
+                                                                                                        <option value="KAB. SIDOARJO, Jawa Timur">KAB. SIDOARJO, Jawa Timur</option>
+                                                                                                        <option value="KAB. MOJOKERTO, Jawa Timur">KAB. MOJOKERTO, Jawa Timur</option>
+                                                                                                        <option value="KAB. JOMBANG, Jawa Timur">KAB. JOMBANG, Jawa Timur</option>
+                                                                                                        <option value="KAB. NGANJUK, Jawa Timur">KAB. NGANJUK, Jawa Timur</option>
+                                                                                                        <option value="KAB. MADIUN, Jawa Timur">KAB. MADIUN, Jawa Timur</option>
+                                                                                                        <option value="KAB. MAGETAN, Jawa Timur">KAB. MAGETAN, Jawa Timur</option>
+                                                                                                        <option value="KAB. NGAWI, Jawa Timur">KAB. NGAWI, Jawa Timur</option>
+                                                                                                        <option value="KAB. BOJONEGORO, Jawa Timur">KAB. BOJONEGORO, Jawa Timur</option>
+                                                                                                        <option value="KAB. TUBAN, Jawa Timur">KAB. TUBAN, Jawa Timur</option>
+                                                                                                        <option value="KAB. LAMONGAN, Jawa Timur">KAB. LAMONGAN, Jawa Timur</option>
+                                                                                                        <option value="KAB. GRESIK, Jawa Timur">KAB. GRESIK, Jawa Timur</option>
+                                                                                                        <option value="KAB. BANGKALAN, Jawa Timur">KAB. BANGKALAN, Jawa Timur</option>
+                                                                                                        <option value="KAB. SAMPANG, Jawa Timur">KAB. SAMPANG, Jawa Timur</option>
+                                                                                                        <option value="KAB. PAMEKASAN, Jawa Timur">KAB. PAMEKASAN, Jawa Timur</option>
+                                                                                                        <option value="KAB. SUMENEP, Jawa Timur">KAB. SUMENEP, Jawa Timur</option>
+                                                                                                        <option value="KOTA KEDIRI, Jawa Timur">KOTA KEDIRI, Jawa Timur</option>
+                                                                                                        <option value="KOTA BLITAR, Jawa Timur">KOTA BLITAR, Jawa Timur</option>
+                                                                                                        <option value="KOTA MALANG, Jawa Timur">KOTA MALANG, Jawa Timur</option>
+                                                                                                        <option value="KOTA PROBOLINGGO, Jawa Timur">KOTA PROBOLINGGO, Jawa Timur</option>
+                                                                                                        <option value="KOTA PASURUAN, Jawa Timur">KOTA PASURUAN, Jawa Timur</option>
+                                                                                                        <option value="KOTA MOJOKERTO, Jawa Timur">KOTA MOJOKERTO, Jawa Timur</option>
+                                                                                                        <option value="KOTA MADIUN, Jawa Timur">KOTA MADIUN, Jawa Timur</option>
+                                                                                                        <option value="KOTA SURABAYA, Jawa Timur">KOTA SURABAYA, Jawa Timur</option>
+                                                                                                        <option value="KOTA BATU, Jawa Timur">KOTA BATU, Jawa Timur</option>
+                                                                                                        <option value="KAB. PANDEGLANG, Banten">KAB. PANDEGLANG, Banten</option>
+                                                                                                        <option value="KAB. LEBAK, Banten">KAB. LEBAK, Banten</option>
+                                                                                                        <option value="KAB. TANGERANG, Banten">KAB. TANGERANG, Banten</option>
+                                                                                                        <option value="KAB. SERANG, Banten">KAB. SERANG, Banten</option>
+                                                                                                        <option value="KOTA TANGERANG, Banten">KOTA TANGERANG, Banten</option>
+                                                                                                        <option value="KOTA CILEGON, Banten">KOTA CILEGON, Banten</option>
+                                                                                                        <option value="KOTA SERANG, Banten">KOTA SERANG, Banten</option>
+                                                                                                        <option value="KOTA TANGERANG SELATAN, Banten">KOTA TANGERANG SELATAN, Banten</option>
+                                                                                                        <option value="KAB. JEMBRANA, Bali">KAB. JEMBRANA, Bali</option>
+                                                                                                        <option value="KAB. TABANAN, Bali">KAB. TABANAN, Bali</option>
+                                                                                                        <option value="KAB. BADUNG, Bali">KAB. BADUNG, Bali</option>
+                                                                                                        <option value="KAB. GIANYAR, Bali">KAB. GIANYAR, Bali</option>
+                                                                                                        <option value="KAB. KLUNGKUNG, Bali">KAB. KLUNGKUNG, Bali</option>
+                                                                                                        <option value="KAB. BANGLI, Bali">KAB. BANGLI, Bali</option>
+                                                                                                        <option value="KAB. KARANGASEM, Bali">KAB. KARANGASEM, Bali</option>
+                                                                                                        <option value="KAB. BULELENG, Bali">KAB. BULELENG, Bali</option>
+                                                                                                        <option value="KOTA DENPASAR, Bali">KOTA DENPASAR, Bali</option>
+                                                                                                        <option value="KAB. LOMBOK BARAT, Nusa Tenggara Barat">KAB. LOMBOK BARAT, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. LOMBOK TENGAH, Nusa Tenggara Barat">KAB. LOMBOK TENGAH, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. LOMBOK TIMUR, Nusa Tenggara Barat">KAB. LOMBOK TIMUR, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. SUMBAWA, Nusa Tenggara Barat">KAB. SUMBAWA, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. DOMPU, Nusa Tenggara Barat">KAB. DOMPU, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. BIMA, Nusa Tenggara Barat">KAB. BIMA, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. SUMBAWA BARAT, Nusa Tenggara Barat">KAB. SUMBAWA BARAT, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. LOMBOK UTARA, Nusa Tenggara Barat">KAB. LOMBOK UTARA, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KOTA MATARAM, Nusa Tenggara Barat">KOTA MATARAM, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KOTA BIMA, Nusa Tenggara Barat">KOTA BIMA, Nusa Tenggara Barat</option>
+                                                                                                        <option value="KAB. KUPANG, Nusa Tenggara Timur">KAB. KUPANG, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB TIMOR TENGAH SELATAN, Nusa Tenggara Timur">KAB TIMOR TENGAH SELATAN, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. TIMOR TENGAH UTARA, Nusa Tenggara Timur">KAB. TIMOR TENGAH UTARA, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. BELU, Nusa Tenggara Timur">KAB. BELU, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. ALOR, Nusa Tenggara Timur">KAB. ALOR, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. FLORES TIMUR, Nusa Tenggara Timur">KAB. FLORES TIMUR, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. SIKKA, Nusa Tenggara Timur">KAB. SIKKA, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. ENDE, Nusa Tenggara Timur">KAB. ENDE, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. NGADA, Nusa Tenggara Timur">KAB. NGADA, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. MANGGARAI, Nusa Tenggara Timur">KAB. MANGGARAI, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. SUMBA TIMUR, Nusa Tenggara Timur">KAB. SUMBA TIMUR, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. SUMBA BARAT, Nusa Tenggara Timur">KAB. SUMBA BARAT, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. LEMBATA, Nusa Tenggara Timur">KAB. LEMBATA, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. ROTE NDAO, Nusa Tenggara Timur">KAB. ROTE NDAO, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. MANGGARAI BARAT, Nusa Tenggara Timur">KAB. MANGGARAI BARAT, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. NAGEKEO, Nusa Tenggara Timur">KAB. NAGEKEO, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. SUMBA TENGAH, Nusa Tenggara Timur">KAB. SUMBA TENGAH, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. SUMBA BARAT DAYA, Nusa Tenggara Timur">KAB. SUMBA BARAT DAYA, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. MANGGARAI TIMUR, Nusa Tenggara Timur">KAB. MANGGARAI TIMUR, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. SABU RAIJUA, Nusa Tenggara Timur">KAB. SABU RAIJUA, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. MALAKA, Nusa Tenggara Timur">KAB. MALAKA, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KOTA KUPANG, Nusa Tenggara Timur">KOTA KUPANG, Nusa Tenggara Timur</option>
+                                                                                                        <option value="KAB. SAMBAS, Kalimantan Barat">KAB. SAMBAS, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. MEMPAWAH, Kalimantan Barat">KAB. MEMPAWAH, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. SANGGAU, Kalimantan Barat">KAB. SANGGAU, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. KETAPANG, Kalimantan Barat">KAB. KETAPANG, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. SINTANG, Kalimantan Barat">KAB. SINTANG, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. KAPUAS HULU, Kalimantan Barat">KAB. KAPUAS HULU, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. BENGKAYANG, Kalimantan Barat">KAB. BENGKAYANG, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. LANDAK, Kalimantan Barat">KAB. LANDAK, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. SEKADAU, Kalimantan Barat">KAB. SEKADAU, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. MELAWI, Kalimantan Barat">KAB. MELAWI, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. KAYONG UTARA, Kalimantan Barat">KAB. KAYONG UTARA, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. KUBU RAYA, Kalimantan Barat">KAB. KUBU RAYA, Kalimantan Barat</option>
+                                                                                                        <option value="KOTA PONTIANAK, Kalimantan Barat">KOTA PONTIANAK, Kalimantan Barat</option>
+                                                                                                        <option value="KOTA SINGKAWANG, Kalimantan Barat">KOTA SINGKAWANG, Kalimantan Barat</option>
+                                                                                                        <option value="KAB. KOTAWARINGIN BARAT, Kalimantan Tengah">KAB. KOTAWARINGIN BARAT, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. KOTAWARINGIN TIMUR, Kalimantan Tengah">KAB. KOTAWARINGIN TIMUR, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. KAPUAS, Kalimantan Tengah">KAB. KAPUAS, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. BARITO SELATAN, Kalimantan Tengah">KAB. BARITO SELATAN, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. BARITO UTARA, Kalimantan Tengah">KAB. BARITO UTARA, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. KATINGAN, Kalimantan Tengah">KAB. KATINGAN, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. SERUYAN, Kalimantan Tengah">KAB. SERUYAN, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. SUKAMARA, Kalimantan Tengah">KAB. SUKAMARA, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. LAMANDAU, Kalimantan Tengah">KAB. LAMANDAU, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. GUNUNG MAS, Kalimantan Tengah">KAB. GUNUNG MAS, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. PULANG PISAU, Kalimantan Tengah">KAB. PULANG PISAU, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. MURUNG RAYA, Kalimantan Tengah">KAB. MURUNG RAYA, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. BARITO TIMUR, Kalimantan Tengah">KAB. BARITO TIMUR, Kalimantan Tengah</option>
+                                                                                                        <option value="KOTA PALANGKARAYA, Kalimantan Tengah">KOTA PALANGKARAYA, Kalimantan Tengah</option>
+                                                                                                        <option value="KAB. TANAH LAUT, Kalimantan Selatan">KAB. TANAH LAUT, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. KOTABARU, Kalimantan Selatan">KAB. KOTABARU, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. BANJAR, Kalimantan Selatan">KAB. BANJAR, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. BARITO KUALA, Kalimantan Selatan">KAB. BARITO KUALA, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. TAPIN, Kalimantan Selatan">KAB. TAPIN, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. HULU SUNGAI SELATAN, Kalimantan Selatan">KAB. HULU SUNGAI SELATAN, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. HULU SUNGAI TENGAH, Kalimantan Selatan">KAB. HULU SUNGAI TENGAH, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. HULU SUNGAI UTARA, Kalimantan Selatan">KAB. HULU SUNGAI UTARA, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. TABALONG, Kalimantan Selatan">KAB. TABALONG, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. TANAH BUMBU, Kalimantan Selatan">KAB. TANAH BUMBU, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. BALANGAN, Kalimantan Selatan">KAB. BALANGAN, Kalimantan Selatan</option>
+                                                                                                        <option value="KOTA BANJARMASIN, Kalimantan Selatan">KOTA BANJARMASIN, Kalimantan Selatan</option>
+                                                                                                        <option value="KOTA BANJARBARU, Kalimantan Selatan">KOTA BANJARBARU, Kalimantan Selatan</option>
+                                                                                                        <option value="KAB. PASER, Kalimantan Timur">KAB. PASER, Kalimantan Timur</option>
+                                                                                                        <option value="KAB. KUTAI KARTANEGARA, Kalimantan Timur">KAB. KUTAI KARTANEGARA, Kalimantan Timur</option>
+                                                                                                        <option value="KAB. BERAU, Kalimantan Timur">KAB. BERAU, Kalimantan Timur</option>
+                                                                                                        <option value="KAB. KUTAI BARAT, Kalimantan Timur">KAB. KUTAI BARAT, Kalimantan Timur</option>
+                                                                                                        <option value="KAB. KUTAI TIMUR, Kalimantan Timur">KAB. KUTAI TIMUR, Kalimantan Timur</option>
+                                                                                                        <option value="KAB. PENAJAM PASER UTARA, Kalimantan Timur">KAB. PENAJAM PASER UTARA, Kalimantan Timur</option>
+                                                                                                        <option value="KAB. MAHAKAM ULU, Kalimantan Timur">KAB. MAHAKAM ULU, Kalimantan Timur</option>
+                                                                                                        <option value="KOTA BALIKPAPAN, Kalimantan Timur">KOTA BALIKPAPAN, Kalimantan Timur</option>
+                                                                                                        <option value="KOTA SAMARINDA, Kalimantan Timur">KOTA SAMARINDA, Kalimantan Timur</option>
+                                                                                                        <option value="KOTA BONTANG, Kalimantan Timur">KOTA BONTANG, Kalimantan Timur</option>
+                                                                                                        <option value="KAB. BULUNGAN, Kalimantan Utara">KAB. BULUNGAN, Kalimantan Utara</option>
+                                                                                                        <option value="KAB. MALINAU, Kalimantan Utara">KAB. MALINAU, Kalimantan Utara</option>
+                                                                                                        <option value="KAB. NUNUKAN, Kalimantan Utara">KAB. NUNUKAN, Kalimantan Utara</option>
+                                                                                                        <option value="KAB. TANA TIDUNG, Kalimantan Utara">KAB. TANA TIDUNG, Kalimantan Utara</option>
+                                                                                                        <option value="KOTA TARAKAN, Kalimantan Utara">KOTA TARAKAN, Kalimantan Utara</option>
+                                                                                                        <option value="KAB. BOLAANG MONGONDOW, Sulawesi Utara">KAB. BOLAANG MONGONDOW, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. MINAHASA, Sulawesi Utara">KAB. MINAHASA, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. KEPULAUAN SANGIHE, Sulawesi Utara">KAB. KEPULAUAN SANGIHE, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. KEPULAUAN TALAUD, Sulawesi Utara">KAB. KEPULAUAN TALAUD, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. MINAHASA SELATAN, Sulawesi Utara">KAB. MINAHASA SELATAN, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. MINAHASA UTARA, Sulawesi Utara">KAB. MINAHASA UTARA, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. MINAHASA TENGGARA, Sulawesi Utara">KAB. MINAHASA TENGGARA, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. BOLAANG MONGONDOW UTARA, Sulawesi Utara">KAB. BOLAANG MONGONDOW UTARA, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. KEP. SIAU TAGULANDANG BIARO, Sulawesi Utara">KAB. KEP. SIAU TAGULANDANG BIARO, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. BOLAANG MONGONDOW TIMUR, Sulawesi Utara">KAB. BOLAANG MONGONDOW TIMUR, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. BOLAANG MONGONDOW SELATAN, Sulawesi Utara">KAB. BOLAANG MONGONDOW SELATAN, Sulawesi Utara</option>
+                                                                                                        <option value="KOTA MANADO, Sulawesi Utara">KOTA MANADO, Sulawesi Utara</option>
+                                                                                                        <option value="KOTA BITUNG, Sulawesi Utara">KOTA BITUNG, Sulawesi Utara</option>
+                                                                                                        <option value="KOTA TOMOHON, Sulawesi Utara">KOTA TOMOHON, Sulawesi Utara</option>
+                                                                                                        <option value="KOTA KOTAMOBAGU, Sulawesi Utara">KOTA KOTAMOBAGU, Sulawesi Utara</option>
+                                                                                                        <option value="KAB. BANGGAI, Sulawesi Tengah">KAB. BANGGAI, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. POSO, Sulawesi Tengah">KAB. POSO, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. DONGGALA, Sulawesi Tengah">KAB. DONGGALA, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. TOLI TOLI, Sulawesi Tengah">KAB. TOLI TOLI, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. BUOL, Sulawesi Tengah">KAB. BUOL, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. MOROWALI, Sulawesi Tengah">KAB. MOROWALI, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. BANGGAI KEPULAUAN, Sulawesi Tengah">KAB. BANGGAI KEPULAUAN, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. PARIGI MOUTONG, Sulawesi Tengah">KAB. PARIGI MOUTONG, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. TOJO UNA UNA, Sulawesi Tengah">KAB. TOJO UNA UNA, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. SIGI, Sulawesi Tengah">KAB. SIGI, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. BANGGAI LAUT, Sulawesi Tengah">KAB. BANGGAI LAUT, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. MOROWALI UTARA, Sulawesi Tengah">KAB. MOROWALI UTARA, Sulawesi Tengah</option>
+                                                                                                        <option value="KOTA PALU, Sulawesi Tengah">KOTA PALU, Sulawesi Tengah</option>
+                                                                                                        <option value="KAB. KEPULAUAN SELAYAR, Sulawesi Selatan">KAB. KEPULAUAN SELAYAR, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. BULUKUMBA, Sulawesi Selatan">KAB. BULUKUMBA, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. BANTAENG, Sulawesi Selatan">KAB. BANTAENG, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. JENEPONTO, Sulawesi Selatan">KAB. JENEPONTO, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. TAKALAR, Sulawesi Selatan">KAB. TAKALAR, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. GOWA, Sulawesi Selatan">KAB. GOWA, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. SINJAI, Sulawesi Selatan">KAB. SINJAI, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. BONE, Sulawesi Selatan">KAB. BONE, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. MAROS, Sulawesi Selatan">KAB. MAROS, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. PANGKAJENE KEPULAUAN, Sulawesi Selatan">KAB. PANGKAJENE KEPULAUAN, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. BARRU, Sulawesi Selatan">KAB. BARRU, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. SOPPENG, Sulawesi Selatan">KAB. SOPPENG, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. WAJO, Sulawesi Selatan">KAB. WAJO, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. SIDENRENG RAPPANG, Sulawesi Selatan">KAB. SIDENRENG RAPPANG, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. PINRANG, Sulawesi Selatan">KAB. PINRANG, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. ENREKANG, Sulawesi Selatan">KAB. ENREKANG, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. LUWU, Sulawesi Selatan">KAB. LUWU, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. TANA TORAJA, Sulawesi Selatan">KAB. TANA TORAJA, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. LUWU UTARA, Sulawesi Selatan">KAB. LUWU UTARA, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. LUWU TIMUR, Sulawesi Selatan">KAB. LUWU TIMUR, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. TORAJA UTARA, Sulawesi Selatan">KAB. TORAJA UTARA, Sulawesi Selatan</option>
+                                                                                                        <option value="KOTA MAKASSAR, Sulawesi Selatan">KOTA MAKASSAR, Sulawesi Selatan</option>
+                                                                                                        <option value="KOTA PARE PARE, Sulawesi Selatan">KOTA PARE PARE, Sulawesi Selatan</option>
+                                                                                                        <option value="KOTA PALOPO, Sulawesi Selatan">KOTA PALOPO, Sulawesi Selatan</option>
+                                                                                                        <option value="KAB. KOLAKA, Sulawesi Tenggara">KAB. KOLAKA, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. KONAWE, Sulawesi Tenggara">KAB. KONAWE, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. MUNA, Sulawesi Tenggara">KAB. MUNA, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. BUTON, Sulawesi Tenggara">KAB. BUTON, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. KONAWE SELATAN, Sulawesi Tenggara">KAB. KONAWE SELATAN, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. BOMBANA, Sulawesi Tenggara">KAB. BOMBANA, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. WAKATOBI, Sulawesi Tenggara">KAB. WAKATOBI, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. KOLAKA UTARA, Sulawesi Tenggara">KAB. KOLAKA UTARA, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. KONAWE UTARA, Sulawesi Tenggara">KAB. KONAWE UTARA, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. BUTON UTARA, Sulawesi Tenggara">KAB. BUTON UTARA, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. KOLAKA TIMUR, Sulawesi Tenggara">KAB. KOLAKA TIMUR, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. KONAWE KEPULAUAN, Sulawesi Tenggara">KAB. KONAWE KEPULAUAN, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. MUNA BARAT, Sulawesi Tenggara">KAB. MUNA BARAT, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. BUTON TENGAH, Sulawesi Tenggara">KAB. BUTON TENGAH, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. BUTON SELATAN, Sulawesi Tenggara">KAB. BUTON SELATAN, Sulawesi Tenggara</option>
+                                                                                                        <option value="KOTA KENDARI, Sulawesi Tenggara">KOTA KENDARI, Sulawesi Tenggara</option>
+                                                                                                        <option value="KOTA BAU BAU, Sulawesi Tenggara">KOTA BAU BAU, Sulawesi Tenggara</option>
+                                                                                                        <option value="KAB. GORONTALO, Gorontalo">KAB. GORONTALO, Gorontalo</option>
+                                                                                                        <option value="KAB. BOALEMO, Gorontalo">KAB. BOALEMO, Gorontalo</option>
+                                                                                                        <option value="KAB. BONE BOLANGO, Gorontalo">KAB. BONE BOLANGO, Gorontalo</option>
+                                                                                                        <option value="KAB. PAHUWATO, Gorontalo">KAB. PAHUWATO, Gorontalo</option>
+                                                                                                        <option value="KAB. GORONTALO UTARA, Gorontalo">KAB. GORONTALO UTARA, Gorontalo</option>
+                                                                                                        <option value="KOTA GORONTALO, Gorontalo">KOTA GORONTALO, Gorontalo</option>
+                                                                                                        <option value="KAB. MAMUJU UTARA, Sulawesi Barat">KAB. MAMUJU UTARA, Sulawesi Barat</option>
+                                                                                                        <option value="KAB. MAMUJU, Sulawesi Barat">KAB. MAMUJU, Sulawesi Barat</option>
+                                                                                                        <option value="KAB. MAMASA, Sulawesi Barat">KAB. MAMASA, Sulawesi Barat</option>
+                                                                                                        <option value="KAB. POLEWALI MANDAR, Sulawesi Barat">KAB. POLEWALI MANDAR, Sulawesi Barat</option>
+                                                                                                        <option value="KAB. MAJENE, Sulawesi Barat">KAB. MAJENE, Sulawesi Barat</option>
+                                                                                                        <option value="KAB. MAMUJU TENGAH, Sulawesi Barat">KAB. MAMUJU TENGAH, Sulawesi Barat</option>
+                                                                                                        <option value="KAB. MALUKU TENGAH, Maluku">KAB. MALUKU TENGAH, Maluku</option>
+                                                                                                        <option value="KAB. MALUKU TENGGARA, Maluku">KAB. MALUKU TENGGARA, Maluku</option>
+                                                                                                        <option value="KAB MALUKU TENGGARA BARAT, Maluku">KAB MALUKU TENGGARA BARAT, Maluku</option>
+                                                                                                        <option value="KAB. BURU, Maluku">KAB. BURU, Maluku</option>
+                                                                                                        <option value="KAB. SERAM BAGIAN TIMUR, Maluku">KAB. SERAM BAGIAN TIMUR, Maluku</option>
+                                                                                                        <option value="KAB. SERAM BAGIAN BARAT, Maluku">KAB. SERAM BAGIAN BARAT, Maluku</option>
+                                                                                                        <option value="KAB. KEPULAUAN ARU, Maluku">KAB. KEPULAUAN ARU, Maluku</option>
+                                                                                                        <option value="KAB. MALUKU BARAT DAYA, Maluku">KAB. MALUKU BARAT DAYA, Maluku</option>
+                                                                                                        <option value="KAB. BURU SELATAN, Maluku">KAB. BURU SELATAN, Maluku</option>
+                                                                                                        <option value="KOTA AMBON, Maluku">KOTA AMBON, Maluku</option>
+                                                                                                        <option value="KOTA TUAL, Maluku">KOTA TUAL, Maluku</option>
+                                                                                                        <option value="KAB. HALMAHERA BARAT, Maluku Utara">KAB. HALMAHERA BARAT, Maluku Utara</option>
+                                                                                                        <option value="KAB. HALMAHERA TENGAH, Maluku Utara">KAB. HALMAHERA TENGAH, Maluku Utara</option>
+                                                                                                        <option value="KAB. HALMAHERA UTARA, Maluku Utara">KAB. HALMAHERA UTARA, Maluku Utara</option>
+                                                                                                        <option value="KAB. HALMAHERA SELATAN, Maluku Utara">KAB. HALMAHERA SELATAN, Maluku Utara</option>
+                                                                                                        <option value="KAB. KEPULAUAN SULA, Maluku Utara">KAB. KEPULAUAN SULA, Maluku Utara</option>
+                                                                                                        <option value="KAB. HALMAHERA TIMUR, Maluku Utara">KAB. HALMAHERA TIMUR, Maluku Utara</option>
+                                                                                                        <option value="KAB. PULAU MOROTAI, Maluku Utara">KAB. PULAU MOROTAI, Maluku Utara</option>
+                                                                                                        <option value="KAB. PULAU TALIABU, Maluku Utara">KAB. PULAU TALIABU, Maluku Utara</option>
+                                                                                                        <option value="KOTA TERNATE, Maluku Utara">KOTA TERNATE, Maluku Utara</option>
+                                                                                                        <option value="KOTA TIDORE KEPULAUAN, Maluku Utara">KOTA TIDORE KEPULAUAN, Maluku Utara</option>
+                                                                                                        <option value="KAB. MERAUKE, Papua Barat">KAB. MERAUKE, Papua Barat</option>
+                                                                                                        <option value="KAB. JAYAWIJAYA, Papua Barat">KAB. JAYAWIJAYA, Papua Barat</option>
+                                                                                                        <option value="KAB. JAYAPURA, Papua Barat">KAB. JAYAPURA, Papua Barat</option>
+                                                                                                        <option value="KAB. NABIRE, Papua Barat">KAB. NABIRE, Papua Barat</option>
+                                                                                                        <option value="KAB. KEPULAUAN YAPEN, Papua Barat">KAB. KEPULAUAN YAPEN, Papua Barat</option>
+                                                                                                        <option value="KAB. BIAK NUMFOR, Papua Barat">KAB. BIAK NUMFOR, Papua Barat</option>
+                                                                                                        <option value="KAB. PUNCAK JAYA, Papua Barat">KAB. PUNCAK JAYA, Papua Barat</option>
+                                                                                                        <option value="KAB. PANIAI, Papua Barat">KAB. PANIAI, Papua Barat</option>
+                                                                                                        <option value="KAB. MIMIKA, Papua Barat">KAB. MIMIKA, Papua Barat</option>
+                                                                                                        <option value="KAB. SARMI, Papua Barat">KAB. SARMI, Papua Barat</option>
+                                                                                                        <option value="KAB. KEEROM, Papua Barat">KAB. KEEROM, Papua Barat</option>
+                                                                                                        <option value="KAB PEGUNUNGAN BINTANG, Papua Barat">KAB PEGUNUNGAN BINTANG, Papua Barat</option>
+                                                                                                        <option value="KAB. YAHUKIMO, Papua Barat">KAB. YAHUKIMO, Papua Barat</option>
+                                                                                                        <option value="KAB. TOLIKARA, Papua Barat">KAB. TOLIKARA, Papua Barat</option>
+                                                                                                        <option value="KAB. WAROPEN, Papua Barat">KAB. WAROPEN, Papua Barat</option>
+                                                                                                        <option value="KAB. BOVEN DIGOEL, Papua Barat">KAB. BOVEN DIGOEL, Papua Barat</option>
+                                                                                                        <option value="KAB. MAPPI, Papua Barat">KAB. MAPPI, Papua Barat</option>
+                                                                                                        <option value="KAB. ASMAT, Papua Barat">KAB. ASMAT, Papua Barat</option>
+                                                                                                        <option value="KAB. SUPIORI, Papua Barat">KAB. SUPIORI, Papua Barat</option>
+                                                                                                        <option value="KAB. MAMBERAMO RAYA, Papua Barat">KAB. MAMBERAMO RAYA, Papua Barat</option>
+                                                                                                        <option value="KAB. MAMBERAMO TENGAH, Papua Barat">KAB. MAMBERAMO TENGAH, Papua Barat</option>
+                                                                                                        <option value="KAB. YALIMO, Papua Barat">KAB. YALIMO, Papua Barat</option>
+                                                                                                        <option value="KAB. LANNY JAYA, Papua Barat">KAB. LANNY JAYA, Papua Barat</option>
+                                                                                                        <option value="KAB. NDUGA, Papua Barat">KAB. NDUGA, Papua Barat</option>
+                                                                                                        <option value="KAB. PUNCAK, Papua Barat">KAB. PUNCAK, Papua Barat</option>
+                                                                                                        <option value="KAB. DOGIYAI, Papua Barat">KAB. DOGIYAI, Papua Barat</option>
+                                                                                                        <option value="KAB. INTAN JAYA, Papua Barat">KAB. INTAN JAYA, Papua Barat</option>
+                                                                                                        <option value="KAB. DEIYAI, Papua Barat">KAB. DEIYAI, Papua Barat</option>
+                                                                                                        <option value="KOTA JAYAPURA, Papua Barat">KOTA JAYAPURA, Papua Barat</option>
+                                                                                                        <option value="KAB. SORONG, Papua">KAB. SORONG, Papua</option>
+                                                                                                        <option value="KAB. MANOKWARI, Papua Barat">KAB. MANOKWARI, Papua Barat</option>
+                                                                                                        <option value="KAB. FAK FAK, Papua">KAB. FAK FAK, Papua</option>
+                                                                                                        <option value="KAB. SORONG SELATAN, Papua">KAB. SORONG SELATAN, Papua</option>
+                                                                                                        <option value="KAB. RAJA AMPAT, Papua">KAB. RAJA AMPAT, Papua</option>
+                                                                                                        <option value="KAB. TELUK BINTUNI, Papua">KAB. TELUK BINTUNI, Papua</option>
+                                                                                                        <option value="KAB. TELUK WONDAMA, Papua">KAB. TELUK WONDAMA, Papua</option>
+                                                                                                        <option value="KAB. KAIMANA, Papua">KAB. KAIMANA, Papua</option>
+                                                                                                        <option value="KAB. TAMBRAUW, Papua">KAB. TAMBRAUW, Papua</option>
+                                                                                                        <option value="KAB. MAYBRAT, Papua">KAB. MAYBRAT, Papua</option>
+                                                                                                        <option value="KAB. MANOKWARI SELATAN, Papua">KAB. MANOKWARI SELATAN, Papua</option>
+                                                                                                        <option value="KAB. PEGUNUNGAN ARFAK, Papua">KAB. PEGUNUNGAN ARFAK, Papua</option>
+                                                                                                        <option value="KOTA SORONG, Papua">KOTA SORONG, Papua</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+
+                            <!-- Accordion title -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-1">Informasi Untuk Kegiatan Kerelawan</a>
+                                </h4>
+                            </div>
+
+                            <!-- Accordion content -->
+                            <div id="demo-acc-panel-1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-sm-12">
+                                        <div class="form-group text-left has-feedback">
+                                            <label class="control-label text-bold">Waktu yang bisa dialokasikan untuk mengikuti kegiatan kerelawanan</label>                                               
+                                            <div class="radio">
+                                                <input id="demo-form-radio-10" class="magic-radio" type="radio" name="waktu" value="Senin sd Jumat" data-bv-field="waktu">
+                                                <label for="demo-form-radio-10">Senin-Jum'at</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-11" class="magic-radio" type="radio" name="waktu" value="Sabtu dan Minggu" data-bv-field="waktu">
+                                                <label for="demo-form-radio-11">Sabtu dan Minggu</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-12" class="magic-radio" type="radio" name="waktu" value="Hari Libur Nasional" data-bv-field="waktu">
+                                                <label for="demo-form-radio-12">Hari Libur Nasional</label>
+                                            </div><i style="display: none;" class="form-control-feedback" data-bv-icon-for="waktu"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="waktu" data-bv-result="NOT_VALIDATED">Waktu diperlukan</small></div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group text-left has-feedback">
+                                            <label class="control-label text-bold">Skala prioritas kegiatan di Sekolah Relawan yang ingin diikuti?</label>                                               
+                                            <div class="radio">
+                                                <input id="demo-form-radio-13" class="magic-radio" type="radio" name="prioritas" value="Free Food Car" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-13">Free Food Car</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-14" class="magic-radio" type="radio" name="prioritas" value="Clean Action" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-14">Clean Action</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-15" class="magic-radio" type="radio" name="prioritas" value="FoodBox" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-15">FoodBox</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-16" class="magic-radio" type="radio" name="prioritas" value="Ketuk Berkah" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-16">Ketuk Berkah</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-17" class="magic-radio" type="radio" name="prioritas" value="Yatim Bright" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-17">Yatim Bright</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-28" class="magic-radio" type="radio" name="prioritas" value="Naik Pangkat" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-28">Naik Pangkat</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-29" class="magic-radio" type="radio" name="prioritas" value="Sedekah Lawan Rentenir" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-29">Sedekah Lawan Rentenir</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-30" class="magic-radio" type="radio" name="prioritas" value="Sumur Ustman" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-30">Sumur Ustman</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-31" class="magic-radio" type="radio" name="prioritas" value="Program Ramadhan" data-bv-field="prioritas">
+                                                <label for="demo-form-radio-31">Program Ramadhan</label>
+                                            </div><i style="display: none;" class="form-control-feedback" data-bv-icon-for="prioritas"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="prioritas" data-bv-result="NOT_VALIDATED">Prioritas diperlukan</small></div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group text-left has-feedback">
+                                            <label class="control-label text-bold">Pengalaman Organisasi (Nama Organisasi / Jabatan / Tahun)</label>                                               
+                                            <input type="text" class="form-control" name="pengalaman" placeholder="" data-bv-field="pengalaman"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="pengalaman"></i>
+                                            <small class="help-block text-left">Jika belum pernah isi dengan "belum"</small>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="pengalaman" data-bv-result="NOT_VALIDATED">Wajib diisi</small></div>
+                                        <div class="form-group text-left has-feedback">
+                                            <label class="control-label text-bold">Keahlian Khsus</label>                                               
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Rescue" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox">Rescue</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-1" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Pendampingan Masyarakat" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-1">Pendampingan Masyarakat</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-2" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Mendongeng" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-2">Mendongeng</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-3" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Mengajar" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-3">Mengajar</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-4" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Mengemudi" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-4">Mengemudi</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-5" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Kesehatan" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-5">Kesehatan</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-6" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Masak" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-6">Memasak</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-201" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Lainnya" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-201">Fotografi</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-202" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Lainnya" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-202">Videographer</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-203" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Lainnya" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-203">Copy Writer</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <input id="demo-form-checkbox-7" class="magic-checkbox" type="checkbox" name="keahlian[]" value="Lainnya" data-bv-field="keahlian[]">
+                                                <label for="demo-form-checkbox-7">Lainnya</label>
+                                            </div><i style="display: none;" class="form-control-feedback" data-bv-icon-for="keahlian[]"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="choice" data-bv-for="keahlian[]" data-bv-result="NOT_VALIDATED">Pilih 2 - 4 keahlian yang dimiliki</small></div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group text-left has-feedback">
+                                            <label class="control-label text-bold">Fokus Relawan</label>                                               
+                                            <div class="radio">
+                                                <input id="demo-form-radio-18" class="magic-radio" type="radio" name="fokus_relawan" value="Pemberdayaan Masyarakat" data-bv-field="fokus_relawan">
+                                                <label for="demo-form-radio-18">Pemberdayaan Masyarakat</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-19" class="magic-radio" type="radio" name="fokus_relawan" value="Edukasi Kerelawanan" data-bv-field="fokus_relawan">
+                                                <label for="demo-form-radio-19">Edukasi Kerelawanan</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-20" class="magic-radio" type="radio" name="fokus_relawan" value="Sosial Kemanusiaan" data-bv-field="fokus_relawan">
+                                                <label for="demo-form-radio-20">Sosial Kemanusiaan</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-21" class="magic-radio" type="radio" name="fokus_relawan" value="Advokasi" data-bv-field="fokus_relawan">
+                                                <label for="demo-form-radio-21">Advokasi</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-22" class="magic-radio" type="radio" name="fokus_relawan" value="Berbasis Komunitas dan Profesi" data-bv-field="fokus_relawan">
+                                                <label for="demo-form-radio-22">Berbasis Komunitas dan Profesi</label>
+                                            </div><i style="display: none;" class="form-control-feedback" data-bv-icon-for="fokus_relawan"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="fokus_relawan" data-bv-result="NOT_VALIDATED">Fokus relawan diperlukan</small></div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group text-left has-feedback">
+                                            <label class="control-label text-bold">Anda Mengetahui SDR Dari</label>                                               
+                                            <div class="radio">
+                                                <input id="demo-form-radio-23" class="magic-radio" type="radio" name="mengetahui" value="Medsos" data-bv-field="mengetahui">
+                                                <label for="demo-form-radio-23">Medsos</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-24" class="magic-radio" type="radio" name="mengetahui" value="Website" data-bv-field="mengetahui">
+                                                <label for="demo-form-radio-24">Website</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-25" class="magic-radio" type="radio" name="mengetahui" value="Teman/Keluarga" data-bv-field="mengetahui">
+                                                <label for="demo-form-radio-25">Teman/Keluarga</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-26" class="magic-radio" type="radio" name="mengetahui" value="Relawan SDR" data-bv-field="mengetahui">
+                                                <label for="demo-form-radio-26">Relawan SDR</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input id="demo-form-radio-27" class="magic-radio" type="radio" name="mengetahui" value="Flayer/Spanduk" data-bv-field="mengetahui">
+                                                <label for="demo-form-radio-27">Flayer/Spanduk</label>
+                                            </div><i style="display: none;" class="form-control-feedback" data-bv-icon-for="mengetahui"></i>
+                                        <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="mengetahui" data-bv-result="NOT_VALIDATED">Wajib diisi</small></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+
+                            <!-- Accordion title -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-parent="#demo-accordion" data-toggle="collapse" href="#demo-acc-panel-2">Informasi Sosial Media</a>
+                                </h4>
+                            </div>
+
+                            <!-- Accordion content -->
+                            <div id="demo-acc-panel-2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Akun Facebook</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="facebook" placeholder="">
+                                            <small class="help-block text-left">Silahkan isi dengan nama akun facebook anda</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Akun Instagram</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="instagram" placeholder="">
+                                            <small class="help-block text-left">Silahkan isi dengan nama akun instagram anda</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold">Akun Twitter</label>
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control" name="twitter" placeholder="">
+                                            <small class="help-block text-left">Silahkan isi dengan nama akun twitter anda</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label text-bold"></label>
+                                        <div class="col-lg-7">
+                                            <div class="g-recaptcha" data-sitekey="6LdYcZYUAAAAAAhH02FUg-6Vw-Bs3X3MuE3gQFCw"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdYcZYUAAAAAAhH02FUg-6Vw-Bs3X3MuE3gQFCw&amp;co=aHR0cHM6Ly9zZHIub3IuaWQ6NDQz&amp;hl=en&amp;v=2diXFiiA9NsPIBTU15LG6xPf&amp;size=normal&amp;cb=y1vcllkidn6h" role="presentation" name="a-vhs884z1sfq0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-block btn-success" value="Kirim">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--===================================================-->
+                <!-- END FORM VALIDATION ON ACCORDION -->
+            </div>
+        </div>
+        <!--===================================================-->
+        <div id="page-content" class="col-sm-2"></div>
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+
+
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="js/jquery.min.js"></script>
+
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="js/nifty.min.js"></script>
+    <!--Bootstrap Validator [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
+
+
+    <!--Masked Input [ OPTIONAL ]-->
+    <script src="plugins/masked-input/jquery.maskedinput.min.js"></script>
+
+
+    <!--Form validation [ SAMPLE ]-->
+    <script src="js/demo/form-validation.js"></script>
+
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+
+
+    <!--Bootstrap Tags Input [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <script src="plugins/chosen/chosen.jquery.min.js"></script>
+
+
+    <!--noUiSlider [ OPTIONAL ]-->
+    <script src="plugins/noUiSlider/nouislider.min.js"></script>
+
+
+    <!--Select2 [ OPTIONAL ]-->
+    <script src="plugins/select2/js/select2.min.js"></script>
+
+
+    <!--Bootstrap Timepicker [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+
+
+    <!--Bootstrap Datepicker [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+
+    <!--Form Component [ SAMPLE ]-->
+    <script src="js/demo/form-component.js"></script>
+    <script>$('#demo-dp-component .input-group.date').datepicker({autoclose: true});</script>
+</body>
+</html>
